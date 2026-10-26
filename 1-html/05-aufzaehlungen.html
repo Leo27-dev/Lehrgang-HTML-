@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ungeordnete Listen: Aufzählungen</title>
 </head>
+
 <body>
   <h1>Ungeordnete Listen: Aufzählungen</h1>
-
-  
+  <ul>
+    <li>Listenpunkt 1</li>
+    <li>Listenpunkt 2</li>
+    <li>Listenpunkt 3</li>
+  </ul>
+  <p>Regeln! <br> als direkte kind-eltern Element einer ul dürfen ausschließlich li-Tags verwendet werden.</p>
+  <p>Beide Elemente (ul und li) sind Block-Elemente. Als inhalt der li-Elmente dürfen andere HTML Elemente verwendet
+    werden.</p>
 
   <h2>Verschachtelte Listen</h2>
+  <ul>
+    <li>Listenpunkt 1
+      <ul>
+        <li>Listenpunkt a</li>
+        <li>Listenpunkt b</li>
+        <li>Listenpunkt c</li>
+      </ul>
+    </li>
+    <li>Listenpunkt 2</li>
+    <li>Listenpunkt 3</li>
+  </ul>
+  <p>Numerierungen funktonieren genauso wie Normal listen</p>
+  <ol>
+    <li>Ole</li>
+    <li>Dave</li>
+    <li>V</li>
 
-  
-
+  </ol>
+  <h2>Definitions Listen</h2>
+  <dl>
+    <dt>HTML</dt> <!-- Description-List term-->
+    <dd>HyperText Markup LAnguage </dd> <!-- Description List Definition-->
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheet</dd>
+  </dl>
 </body>
+
 </html>
