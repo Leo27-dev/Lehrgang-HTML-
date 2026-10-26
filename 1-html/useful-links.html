@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nützliche Links zum Üben und Nachschlagen</title>
+    <link rel="stylesheet" href="css/solid.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all-about.css">
+    <style>
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 564px) {
+            .wrapper {
+                width: 540px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .wrapper {
+                width: 720px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .wrapper {
+                width: 940px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .wrapper {
+                width: 1120px;
+            }
+        }
+
+        a[href^="https://"]::after {
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            /* Set the font to Solid */
+            font: var(--fa-font-solid);
+            /* Set the Unicode value for the "fa-ghost" icon */
+            content: ' \f14d';
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Nützliche Links zum Üben und Nachschlagen</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <ul>
+                <li><a href="https://wiki.selfhtml.org/wiki/SELFHTML" target="_blank">SelfHTML von SELFHTML e.V. </a></li>
+                <li><a href="https://developer.mozilla.org/de/docs/Web/CSS" target="_blank">CSS-Referenz von MDN </a></li>
+                <li><a href="https://tympanus.net/codrops/css_reference/flexbox/" target="_blank">Flexbox-Referenz von Sara Soueidan </a></li>
+                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox Layout Guide von Chris Coyer </a></li>
+                <li><a href="https://www.digitalocean.com/community/tutorials/a-visual-guide-to-css3-flexbox-properties" target="_blank">Guide für Flexbox Eigenschaften von Dimitar Stojanov </a></li>
+                <li><a href="https://bennettfeely.com/flexplorer/" target="_blank">Flexplorer von Bennet Feely </a></li>
+                <li><a href="https://flexboxfroggy.com/#de" target="_blank">Flexbox Froggy von Codepip </a></li>
+                <li><a href="https://cssgridgarden.com/#de" target="_blank">Grid Garden von Codepip </a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maßeinheiten in CSS</title>
+  <link rel="stylesheet" href="style.css" media="screen">
+  <link rel="stylesheet" href="print.css" media="print">
+  <style>
+
+    /** Absolute Maßeinheiten
+    
+    Pixel       (px)
+    
+    Punkt       (pt)
+    Inch        (in)
+    Millimeter  (mm)
+    Zentimeter  (cm)
+
+    * * Relative Maßeinheiten
+
+    Prozent     (%)
+        bezieht sich auf die Größenangabe der entsprechenden Eigenschaft des Eltern-Elementes
+
+    Em          (em, rem)
+        bezieht sich auf die Breite des kleinen Buchstaben "m" ...
+        em: ... des Eltern-Elementes (ähnlich Prozent) ...
+
+        rem ... des Root-Elementes (html) ...
+
+        ... in Abhängigkeit der Schriftgröße dieses Elementes
+
+    Ex          (ex)
+        wie em, nur wird die Breite des kleinen "x" als Basis angewendet
+
+    Viewport-Breite,
+    Viewport-Höhe (vw, vh)
+        bezieht sich auf die Größe des sichtbaren Bereiches des Browserfensters
+    */
+
+    
+  </style>
+</head>
+<body>
+
+  <h1>Maßeinheiten in CSS</h1>
+
+  <p>Standard-Absatz</p>
+
+  <div>
+    <h2>Überschrift in Ebene 2</h2>
+
+    <p>Absatz in Ebene 2</p>
+
+    <p class="basis">Ein rem-Absatz</p>
+  </div>
+
+  <div class="vw">
+    <p>Breite in vw</p>
+  </div>
+
+</body>
+</html>

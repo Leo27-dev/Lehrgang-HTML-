@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fließende Boxen</title>
+  <style>
+    header,
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #about { display: flow-root; }
+    
+    figure { float: right; }
+    
+    /* Textumfluss deaktivieren */
+    /* footer { 
+      clear: both; 
+    } */
+  </style>
+</head>
+
+<body>
+  <header>
+    <p>Der Header</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Über uns</h2>
+      <figure>
+        <img src="images/maria.png" alt="Maria Garcia">
+        <figcaption>Maria Garcia</figcaption>
+      </figure>
+      <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt
+        im
+        Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext.</p>
+      <p>Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal,
+        wenn
+        Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden.
+        Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden.</p>
+      <p>Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal,
+        wenn
+        Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden.</p>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>Der Footer</p>
+  </footer>
+</body>
+
+</html>

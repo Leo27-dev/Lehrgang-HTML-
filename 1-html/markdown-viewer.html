@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Viewer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      padding: 10px 16px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 8px;
+      min-height: 0;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .panel h2 {
+      margin: 0 0 4px 0;
+      font-size: 0.95rem;
+    }
+
+    textarea {
+      flex: 1;
+      width: 100%;
+      resize: none;
+      padding: 8px;
+      font-family: "Consolas", "Fira Code", monospace;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #preview {
+      flex: 1;
+      overflow: auto;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+    }
+
+    button {
+      margin-top: 4px;
+      align-self: flex-start;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Markdown Viewer (lokal)</h1>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Markdown-Eingabe</h2>
+      <textarea id="md-input">
+# Überschrift
+
+**Fett**, *kursiv* und eine Liste:
+
+- Punkt 1
+- Punkt 2
+
+[Ein Link](https://example.com)
+      </textarea>
+      <button id="render-btn">Rendern</button>
+    </section>
+
+    <section class="panel">
+      <h2>Vorschau</h2>
+      <div id="preview"></div>
+    </section>
+  </main>
+
+  <!-- Markdown-Parser von CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const input = document.getElementById("md-input");
+    const preview = document.getElementById("preview");
+    const button = document.getElementById("render-btn");
+
+    function renderMarkdown() {
+      const text = input.value;
+      preview.innerHTML = marked.parse(text);
+    }
+
+    button.addEventListener("click", renderMarkdown);
+
+    // Beim Laden einmal automatisch rendern
+    window.addEventListener("DOMContentLoaded", renderMarkdown);
+  </script>
+</body>
+</html>
