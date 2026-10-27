@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     table {
       border-collapse: collapse;
     }
-  
+
     table,
     th,
     td {
@@ -18,28 +19,130 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Tabellen</h1>
 
   <h2>einfache Tabelle</h2>
+  <!-- Die anzah der Tabellenzellen inerhalb der Reihen soll immer gleich sein.-->
+  <table>
+    <tr>
+      <td> zeile 1</td>
+      <td> zeile 2</td>
+      <td>Zeile 3</td>
+    </tr>
+    <tr>
+      <td> zeile 4/td>
+      <td> zeile 5</td>
+      <td>Zeile 6</td>
+    </tr>
 
-  
+  </table>
 
   <h2>Tabelle mit Kopfzellen</h2>
+  <table>
+    <tr>
+      <th>lfd. Nr. </th>
+      <th>artikel</th>
+      <th>Preise</th>
+    </tr>
+    <tr>
+      <td> 1</td>
+      <td> Bleistift</td>
+      <td>1,99</td>
+    </tr>
+    <tr>
+      <td> 3 </td>
+      <td> Radiergummi</td>
+      <td>2,50</td>
+    </tr>
 
-  
+  </table>
+
 
   <h2>Tabelle mit Sektoren</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>lfd. Nr. </th>
+        <th>artikel</th>
+        <th>Preise</th>
+      </tr>
+    </thead>
+    <tboddy>
+      <tr>
+        <td> 1</td>
+        <td> Bleistift</td>
+        <td>1,99</td>
+      </tr>
+      <tr>
+        <td> 3 </td>
+        <td> Radiergummi</td>
+        <td>2,50</td>
+      </tr>
+    </tboddy>
+    <tfoot>
+      <tr>
+        <td> 3 </td>
+        <td> Radiergummi</td>
+        <td>2,50</td>
+      </tr>
+    </tfoot>
 
-  
+  </table>
+
 
   <h2>Tabellen-Beschreibung</h2>
+  <!-- table>(tr>th*2)+(tr>td*2)*3-->
+  <table>
+    <caption>Beschreibung der Tabelle</caption>
+    <tr>
+      <th>Name</th>
+      <th>Lieblingsfarbe</th>
+    </tr>
+    <tr>
+      <td>Dennis</td>
+      <td>blau</td>
+    </tr>
+    <tr>
+      <td>Stefan</td>
+      <td>Grün</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
 
-  
+
 
   <h2>Zellen verbinden</h2>
+  <table>
+    <tr>
+      <td colspan="3">Reihe 1 Zeile 1</td>
+    </tr>
+    <tr>
+      <th>Reihe 2 Zeile 1</th>
+      <th>Reihe 2 Zeile 2</th>
+      <th>Reihe 2 Zeile 3</th>
+    </tr>
+    <tr>
+      <td>Reihe 3 Zeile 1</td>
+      <td colspan="2">Reihe 3 Zeile 2 &amp; 3</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Reihe 4-5 Zeile 1</td>
+      <td>Reihe 4 Zeile 2</td>
+      <td>Reihe 4 Zeile 3</td>
+    </tr>
+    <tr>
+      <td>Reihe 5 Zeile 2</td>
+      <td>Reihe 5 Zeile 3</td>
+    </tr>
+  </table>
 
-  
-  
+
+
 </body>
+
 </html>
