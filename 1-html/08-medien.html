@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grafiken und Bilder</title>
 </head>
+
 <body>
   <h1>Grafiken und Bilder</h1>
 
   <!-- Die klassische Methode -->
 
+
   <!-- relative Pfadangabe -->
-  
-
+  <img src="images/erde.jpg" alt="Bild von denm Planeten Erde aus dem Weltall">
+  <p>Bild von unserer Erde</p>
   <!-- absolute Pfadangabe -->
-  
 
+  <img src="https://test.jaderbass.de/04-scrset-pixeldichte/small.jpg" alt="Bild von einer brücke">
+  <p>Brücke in New York</p>
   <!-- Neue Methoden -->
 
-  
+  <figure>
+    <img src="images/maria.png" alt=" Maria Gercia">
+    <figcaption>abb. 1 Maria Gercia evtl. Quellenangbe</figcaption>
+  </figure>
 
   <h2>Bilder in Abhängigkeit der Bildschirmbreite laden</h2>
 
-  
+
+  <figure>
+    <img src="images/small.jpg" alt="Brücke in New York" srcset="images/small.jpg 1x,
+           images/medium.jpg 2x,
+           images/large.jpg 3x, ">
+  </figure>
 
   <h2>Bilder in Abhängigkeit der Bildschirmauflösung laden</h2>
   <!-- 
@@ -34,17 +46,35 @@
 
   Buch Kap. 6.3 S. 122ff
   -->
+  <figure>
+    <img src="images/small.jpg" alt="Brücke in New York" srcset="images/small.jpg 400w,
+           images/medium.jpg 800w,
+           images/large.jpg 1600w , " sizes="(min-with:600px),500w, 1000w">
+  </figure>
 
-  
 
   <h2>Andere Medien</h2>
 
   <!-- Audio -->
+  <figure>
+    <audio src="audio/Kalimba.mp3" alt="" controls></audio>
+    <p>Audiodateiern herunterladen</p>
+    <figcaption>Kalimba Song</figcaption>
+  </figure>
+  <!-- autoplay>-->
 
 
   <!-- Video -->
 
-  
-
+  <figure>
+    <video src="video/20110406_0007.mp4" , style="max-width: 10pxl," controls></video>
+    <p>Video herunterladen</p>
+    <figcaption>Bechriftung,Titel, Quellen</figcaption>
+  </figure>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ed3fIk-SEz0?si=bYqx-Z0xJLLJEnVm"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
+
 </html>
