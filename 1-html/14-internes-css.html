@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS im Dokument nutzen</title>
-  
+  <style>
+    selector {
+      eigenschaft: wert;
+      eigenschaft-2: "anderer wert"
+        /* mehrere worte in anführungszeichen  */
+        shorthand: wert 1 wert 2 wert 3;
+    }
+
+    h1,
+    h2,
+    p {
+      font-family: Arial;
+      color: cornflowerblue;
+    }
+
+    h2 {
+      font-family: Arial;
+      color: green;
+    }
+
+    p {
+      font-family: arial;
+      color: darkblue;
+    }
+  </style>
 </head>
+
 <body>
   <h1>CSS im Dokument nutzen</h1>
 
@@ -15,4 +41,5 @@
   <p>Hier kommt ein Absatz.</p>
   <p>Hier kommt noch ein Absatz.</p>
 </body>
+
 </html>
