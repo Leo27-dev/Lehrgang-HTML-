@@ -10,75 +10,105 @@
 </head>
 
 <body>
+
+    <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <h1 id="top">Willkommen auf der Website des Stadtgartens</h1>
+        <h1 id="top">Stadtgarten Freiburg</h1>
+        
+        <!-- Die Links wurden aus dem Main-Bereich in eine globale Navigation überführt -->
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="angebote.html">Unsere Angebote</a></li>
+                <li><a href="termine.html">Veranstaltungen &amp; Termine</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- 2. HAUPTINHALT -->
     <main>
-        <p>Der Stadtgarten ist ein öffentlicher Park in der Innenstadt von Freiburg im Breisgau. Er wurde im 19.
-            Jahrhundert angelegt und bietet eine grüne Oase inmitten der Stadt. Der Park ist bekannt für seine
-            gepflegten Blumenbeete, alten Bäume und den großen Teich, der von Enten und Schwänen bewohnt wird.</p>
+        
+        <!-- INHALTSBEREICH 1: Allgemeine Vorstellung -->
+        <section aria-labelledby="ueber-uns">
+            <h2 id="ueber-uns">Über den Stadtgarten</h2>
+            <p>Der Stadtgarten ist ein öffentlicher Park in der Innenstadt von Freiburg im Breisgau. Er wurde im 19.
+                Jahrhundert angelegt und bietet eine grüne Oase inmitten der Stadt. Der Park ist bekannt für seine
+                gepflegten Blumenbeete, alten Bäume und den großen Teich, der von Enten und Schwänen bewohnt wird.</p>
 
-        <p>Im Stadtgarten gibt es zahlreiche Spazierwege, die zum Flanieren und Entspannen einladen. Es gibt auch
-            Spielplätze für Kinder, Picknickbereiche und Cafés, in denen man sich stärken kann. Der Park ist ein
-            beliebter Treffpunkt für Einheimische und Touristen gleichermaßen.</p>
+            <p>Im Stadtgarten gibt es zahlreiche Spazierwege, die zum Flanieren und Entspannen einladen. Es gibt auch
+                Spielplätze für Kinder, Picknickbereiche und Cafés, in denen man sich stärken kann. Der Park ist ein
+                beliebter Treffpunkt für Einheimische und Touristen gleichermaßen.</p>
 
-        <p>Besonders im Frühling und Sommer ist der Stadtgarten ein beliebtes Ziel für Veranstaltungen wie Konzerte,
-            Theateraufführungen und Märkte. Die ruhige Atmosphäre und die natürliche Schönheit des Parks machen ihn zu
-            einem idealen Ort, um dem Trubel der Stadt zu entfliehen.</p>
+            <p>Besonders im Frühling und Sommer ist der Stadtgarten ein beliebtes Ziel für Veranstaltungen wie Konzerte,
+                Theateraufführungen und Märkte. Die ruhige Atmosphäre und die natürliche Schönheit des Parks machen ihn zu
+                einem idealen Ort, um dem Trubel der Stadt zu Gymnastik und Alltag zu entfliehen.</p>
 
-        <p>
-            <a href="https://de.wikipedia.org/wiki/Stadtgarten_(Freiburg_im_Breisgau)" target="_blank"
-                rel="noopener">Mehr Infos zu unserem Stadtgarten auf Wikipedia</a>
-        </p>
+            <p>
+                <a href="https://wikipedia.org" target="_blank"
+                    rel="noopener">Mehr Infos zu unserem Stadtgarten auf Wikipedia</a>
+            </p>
 
-        <figure>
-            <img src="images/stadtgarten.png"
-                alt="Blick auf die blühenden Beete und die Parklandschaft des Freiburger Stadtgartens">
-            <figcaption>Impressionen aus den gepflegten Grünanlagen des Stadtgartens</figcaption>
-        </figure>
+            <figure>
+                <img src="images/stadtgarten.png"
+                    alt="Blick auf die blühenden Beete und die Parklandschaft des Freiburger Stadtgartens">
+                <figcaption>Impressionen aus den gepflegten Grünanlagen des Stadtgartens</figcaption>
+            </figure>
+        </section>
 
-        <h3>Unsere Aktivitäten und Bereiche:</h3>
-        <ul>
-            <li>Anlegen eines Kräutergartens</li>
-            <li>Professionelle Baumpflege</li>
-            <li>Frisches Gemüse anbauen</li>
-            <li>Alles rund um den Teich</li>
-        </ul>
+        <!-- INHALTSBEREICH 2: Aktivitäten -->
+        <section aria-labelledby="aktivitaeten">
+            <!-- Fehler behoben: Hierarchie korrigiert von h3 zu h2 -->
+            <h2 id="aktivitaeten">Unsere Aktivitäten und Bereiche</h2>
+            <ul>
+                <li>Anlegen eines Kräutergartens</li>
+                <li>Professionelle Baumpflege</li>
+                <li>Frisches Gemüse anbauen</li>
+                <li>Alles rund um den Teich</li>
+            </ul>
+        </section>
 
-        <p>
-            <a href="angebote.html">Entdecke hier unsere zusätzlichen Angebote</a>
-        </p>
+        <!-- INHALTSBEREICH 3: Öffnungszeiten (Struktur verbessert) -->
+        <section aria-labelledby="oeffnungszeiten">
+            <h2 id="oeffnungszeiten">Öffnungszeiten</h2>
+            <!-- Semantische Definitionsliste verknüpft Tag und Uhrzeit für Screenreader eindeutig -->
+            <dl>
+                <dt>Montag</dt>
+                <dd>Geschlossen (Ruhetag für Pflanzpflege)</dd>
+                
+                <dt>Dienstag bis Freitag</dt>
+                <dd>14:00 Uhr – 18:00 Uhr</dd>
+                
+                <dt>Samstag (Vereinstag)</dt>
+                <dd>10:00 Uhr – 16:00 Uhr</dd>
+                
+                <dt>Sonntag</dt>
+                <dd>11:00 Uhr – 14:00 Uhr (Frühschoppen &amp; Pflanzentausch)</dd>
+            </dl>
+        </section>
 
-        <h2>Öffnungszeiten</h2>
-        <ul>
-            <li><strong>Montag:</strong> Geschlossen (Ruhetag für Pflanzpflege)</li>
-            <li><strong>Dienstag bis Freitag:</strong> 14:00 Uhr – 18:00 Uhr</li>
-            <li><strong>Samstag (Vereinstag):</strong> 10:00 Uhr – 16:00 Uhr</li>
-            <li><strong>Sonntag:</strong> 11:00 Uhr – 14:00 Uhr (Frühschoppen &amp; Pflanzentausch)</li>
-        </ul>
+        <!-- INHALTSBEREICH 4: Gartenregeln -->
+        <section aria-labelledby="regeln">
+            <h2 id="regeln">Gartenregeln</h2>
+            <ol>
+                <li>Bitte die Wege nicht verlassen, um die Pflanzen zu schützen.</li>
+                <li>Hunde sind an der Leine zu führen und Hundekot ist zu entsorgen.</li>
+                <li>Das Mitbringen von Glasflaschen ist nicht gestattet.</li>
+                <li>Rauchen ist im gesamten Park verboten.</li>
+                <li>Bitte keine Pflanzen oder Blumen aus dem Park entnehmen.</li>
+            </ol>
 
-        <a href="termine.html"> Informationen zu unseren Veranstaltungen finden Sie hier </a>
+            <figure>
+                <img src="images/setzlinge.png" alt="Junge Pflanzensetzlinge in der Aufzucht">
+                <figcaption>Frische Setzlinge bereit für die Pflanzung</figcaption>
+            </figure>
+        </section>
 
-        <h2>Gartenregeln</h2>
-        <ol>
-            <li>Bitte die Wege nicht verlassen, um die Pflanzen zu schützen.</li>
-            <li>Hunde sind an der Leine zu führen und Hundekot ist zu entsorgen.</li>
-            <li>Das Mitbringen von Glasflaschen ist nicht gestattet.</li>
-            <li>Rauchen ist im gesamten Park verboten.</li>
-            <li>Bitte keine Pflanzen oder Blumen aus dem Park entnehmen.</li>
-        </ol>
-
-        <figure>
-            <img src="images/setzlinge.png" alt="Junge Pflanzensetzlinge in der Aufzucht">
-            <figcaption>Frische Setzlinge bereit für die Pflanzung</figcaption>
-        </figure>
     </main>
 
+    <!-- 3. FUSSBEREICH -->
     <footer>
         <p>&copy; 2026 Stadtgarten Freiburg</p>
         <p><a href="#top">Zurück zum Seitenanfang</a></p>
     </footer>
-</body>
 
+</body>
 </html>

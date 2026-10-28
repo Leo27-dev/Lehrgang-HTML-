@@ -5,88 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Übersicht der anstehenden Termine, Workshops und Veranstaltungen im Stadtgarten Freiburg.">
-    <title>Termine &amp; Veranstaltungen | Stadtgarten Freiburg</title>
+        content="Entdecke die Angebote im Stadtgarten Freiburg: Von Garten-Patenschaften und Workshops über Saatgut-Tauschbörsen bis hin zu entspannendem Garten-Yoga im Grünen.">
+    <title>Unsere Angebote | Stadtgarten Freiburg</title>
 </head>
 
 <body>
 
+    <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <h1>Stadtgarten Freiburg</h1>
-        <p>Erleben, Lernen und Entspannen im Grünen</p>
+        <p class="site-title">Stadtgarten Freiburg</p>
+        <p class="slogan">Erleben, Lernen und Entspannen im Grünen</p>
+
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="./index.html">Zurück zur Homepage</a></li>
+                <li><a href="./angebote.html"></a>Zu unseren Angeboten</li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <p><a href="index.html">Startseite</a> | <a href="angebote.html">Angebote</a> | <a
-                href="termine.html">Termine</a></p>
-    </nav>
-
+    <!-- 2. HAUPTINHALT -->
     <main>
-        <h2>Veranstaltungskalender</h2>
-        <p>Hier findest du alle kommenden Aktivitäten in unserem Stadtgarten. Melde dich rechtzeitig an, da die Plätze
-            für einige Workshops begrenzt sind!</p>
+        <h1 id="main-heading">Unsere zusätzlichen Angebote</h1>
+        <p>Der Stadtgarten ist mehr als nur ein Park. Entdecke unsere vielfältigen Mitmach-Angebote, Workshops und
+            Events für Groß und Klein. Hier ist für jeden Naturliebhaber etwas dabei!</p>
 
-        <table border="1" cellpadding="8">
-            <caption>Aktuelle Termine und Workshops im Stadtgarten</caption>
+        <!-- HTML-Attribute für die Linien:
+             border="1"      -> Aktiviert die Gitternetzlinien (Standard-Schwarz)
+             cellpadding="8" -> Erzeugt einen sauberen Innenabstand in den Zellen, damit der Text nicht an den Linien klebt
+             width="100%"    -> Streckt die Tabelle über die gesamte Bildschirmbreite -->
+        <table border="1" cellpadding="8" width="100%">
+            <caption>Übersicht unserer zusätzlichen Freizeit- und Mitmach-Angebote</caption>
             <thead>
                 <tr>
-                    <th scope="col">Datum</th>
-                    <th scope="col">Uhrzeit</th>
-                    <th scope="col">Veranstaltung</th>
-                    <th scope="col">Treffpunkt</th>
-                    <th scope="col">Freie Plätze</th>
+                    <th scope="col">Angebot</th>
+                    <th scope="col">Vorschau</th>
+                    <th scope="col">Beschreibung</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Angebot 1 -->
                 <tr>
-                    <td>14.04.2027</td>
-                    <td>10:00 Uhr</td>
-                    <td>Große Saatgut- &amp; Pflanzentauschbörse</td>
-                    <td>Haupteingang / Große Wiese</td>
-                    <td>Unbegrenzt</td>
+                    <th scope="row" valign="top">Garten-Patenschaften</th>
+                    <td valign="top">
+                        <figure style="margin: 0;">
+                            <!-- width="150" stellt sicher, dass das Bild in der Zelle nicht zu groß wird -->
+                            <img src="https://unsplash.com" alt="Familie pflegt gemeinsam ein bepflanztes Hochbeet"
+                                width="150">
+                        </figure>
+                    </td>
+                    <td valign="top">Übernimm die Patenschaft für dein eigenes Hochbeet! Perfekt für Familien, WGs oder
+                        Einzelpersonen
+                        ohne eigenen Garten. Wir stellen die Erde und das Basis-Saatgut, du erntest dein eigenes
+                        Bio-Gemüse.
+                    </td>
                 </tr>
+
+                <!-- Angebot 2 -->
                 <tr>
-                    <td>25.04.2027</td>
-                    <td>14:00 Uhr</td>
-                    <td>Workshop: Obstbäume richtig schneiden</td>
-                    <td>Geräteschuppen am Teich</td>
-                    <td>5 Plätze</td>
+                    <th scope="row" valign="top">Workshops &amp; Kurse</th>
+                    <td valign="top">
+                        <small>Kein Bild verfügbar</small>
+                    </td>
+                    <td valign="top">Lerne von unseren Profis. In regelmäßigen Seminaren erfährst du alles über
+                        nachhaltige Kompostierung,
+                        den richtigen Obstbaumschnitt im Frühjahr oder die Kunst des Haltbarmachens durch Fermentierung.
+                    </td>
                 </tr>
+
+                <!-- Angebot 3 -->
                 <tr>
-                    <td>05.05.2027</td>
-                    <td>17:30 Uhr</td>
-                    <td>Garten-Yoga zum Feierabend</td>
-                    <td>Rosengarten</td>
-                    <td>12 Plätze</td>
+                    <th scope="row" valign="top">Saatgut- &amp; Pflanzentausch</th>
+                    <td valign="top">
+                        <small>Kein Bild verfügbar</small>
+                    </td>
+                    <td valign="top">Jedes Frühjahr treffen wir uns zum großen Austausch. Bringe deine überschüssigen
+                        Setzlinge oder
+                        gesammeltes, samenfestes Saatgut mit und tausche es gegen neue, spannende Raritäten für dein
+                        Beet.
+                    </td>
                 </tr>
+
+                <!-- Angebot 4 -->
                 <tr>
-                    <td>16.05.2027</td>
-                    <td>11:00 Uhr</td>
-                    <td>Gemeinsames Anlegen des neuen Kräutergartens</td>
-                    <td>Gemeinschaftsbeet West</td>
-                    <td>8 Plätze</td>
-                </tr>
-                <tr>
-                    <td>30.05.2027</td>
-                    <td>15:00 Uhr</td>
-                    <td>Seminar: Nachhaltig Kompostieren in der Stadt</td>
-                    <td>Kompostanlage hinter dem Café</td>
-                    <td>15 Plätze</td>
-                </tr>
-                <tr>
-                    <td>13.06.2027</td>
-                    <td>11:00 Uhr</td>
-                    <td>Frühschoppen &amp; botanische Teichführung</td>
-                    <td>Seeterrasse / Pavillon</td>
-                    <td>20 Plätze</td>
+                    <th scope="row" valign="top">Garten-Yoga</th>
+                    <td valign="top">
+                        <figure style="margin: 0;">
+                            <img src="https://unsplash.com" alt="Eine Gruppe Menschen macht Yoga auf einer grünen Wiese"
+                                width="150">
+                        </figure>
+                    </td>
+                    <td valign="top">Finde deine innere Ruhe inmitten blühender Beete. Unsere zertifizierten Trainer
+                        leiten dich durch
+                        entspannende Hatha-Yoga-Stunden an der frischen Luft. Perfekt, um dem stressigen Stadtalltag zu
+                        entfliehen.
+                    </td>
                 </tr>
             </tbody>
         </table>
     </main>
 
+    <!-- 3. FUSSBREICH -->
     <footer>
         <p>&copy; 2026 Stadtgarten Freiburg</p>
-        <p><a href="index.html">Zurück zur Homepage</a></p>
     </footer>
 
 </body>
