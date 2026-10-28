@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nehmen Sie Kontakt mit dem Stadtgarten Freiburg e. V. auf. Stellen Sie Anfragen zu Mitgliedschaften, Spenden oder allgemeinen Informationen.">
+    <title>Kontakt | Stadtgarten Freiburg</title>
+</head>
+
+<body>
+
+    <!-- 1. KOPFBEREICH & NAVIGATION -->
+    <header>
+        <p class="site-title">Stadtgarten Freiburg</p>
+        <p class="slogan">Erleben, Lernen und Entspannen im Grünen</p>
+
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="./index.html">Zurück zur Homepage</a></li>
+                <li><a href="angebote.html">Unsere Angebote</a></li>
+                <li><a href="termine.html">Veranstaltungen &amp; Termine</a></li>
+                <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. HAUPTINHALT -->
+    <main>
+        <h1>Kontakt</h1>
+
+        <!-- Adresse des Vereins -->
+        <section aria-labelledby="adresse-titel">
+            <h2 id="adresse-titel" class="visually-hidden">Unsere Anschrift</h2>
+            <address>
+                <strong>Stadtgarten Freiburg e. V.</strong><br>
+                Am Rosengarten 1<br>
+                79104 Freiburg im Breisgau<br>
+                Telefon: 0761 1234567 <!-- Vorwahl für Freiburg von 03641 auf 0761 korrigiert -->
+            </address>
+        </section>
+
+        <!-- Kontaktformular -->
+        <section aria-labelledby="form-titel">
+            <h2 id="form-titel">Kontaktieren Sie uns!</h2>
+
+            <form action="#" method="POST">
+                <p>
+                    <label for="vname">Vorname:*</label><br>
+                    <input type="text" name="vname" id="vname" placeholder="Dein Vorname" required>
+                </p>
+                <p>
+                    <label for="fname">Nachname:*</label><br>
+                    <input type="text" name="fname" id="fname" placeholder="Dein Nachname" required>
+                </p>
+                <p>
+                    <label for="age">Alter:</label><br>
+                    <input type="number" name="age" id="age" min="1">
+                </p>
+
+                <p>
+                    <label for="email">E-Mail:*</label><br>
+                    <input type="email" name="email" id="email" placeholder="beispiel@mail.de" required>
+                </p>
+
+                <p>
+                    <label for="anfrage">Grund der Anfrage:*</label><br>
+                    <select name="anfrage" id="anfrage" required>
+                        <option value="" selected disabled>Bitte einen Grund auswählen</option>
+                        <option value="mAntrag">Mitglied-Antrag</option>
+                        <option value="spenden">Spenden</option>
+                        <option value="info">Informationen</option>
+                    </select>
+                </p>
+
+                <!-- Nachricht (Korrektur: id zugewiesen und mit label verknüpft) -->
+                <p>
+                    <label for="nachricht">Ihre Nachricht:*</label><br>
+                    <textarea name="nachricht" id="nachricht" rows="5" cols="40" placeholder="Schreiben Sie uns..."
+                        required></textarea>
+                </p>
+
+                <!-- Buttons -->
+                <p>
+                    <button type="submit">Absenden</button>
+                    <button type="reset">Zurücksetzen</button>
+                </p>
+
+                <p><small>* Diese Felder sind verpflichtend</small></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- 3. FUSSBREICH -->
+    <footer>
+        <p>&copy; 2026 Stadtgarten Freiburg</p>
+    </footer>
+
+</body>
+
+</html>
