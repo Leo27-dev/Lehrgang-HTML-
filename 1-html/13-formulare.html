@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulare</title>
 </head>
+
 <body>
   <h1>Formulare</h1>
+  <form id="kontaktformular" action="https://test.jaderbass.de/formtester.php" method="post">
+    <fieldset>
+      <legend>Persönliche Daten</legend>
+      <label> Frau
+        <input type="radio" name="sex" id="f" value="f" checked>
+      </label>
+      <label> Mann
+        <input type="radio" name="sex" id="m" value="m">
+      </label>
+      <label> Divers
+        <input type="radio" name="sex" id="d" value="d">
+      </label>
+      <p><label for="vname">Vorname:</label></p>
+      <input type="text" name="vorname" id="vorname" maxlength="3" placeholder="Vorname">
+      <p><label for="fnachme">Nachname</label></p>
+      <input type="text" name="fnachme" id="fnachme" maxlength="20">
+      <p><label for="email">E-mail</label></p>
+      <input type="email" name="email" id="email" required>
+      <p><label for="age">Alter</label></p>
+      <input type="number" name="age" id="age" min="18">
+    </fieldset>
 
-  
+    <fieldset>
+      <legend>Umfrage</legend>
+      <p><label for="pw">Passwort</label></p>
+      <input type="password" name="pw" id="pw" minlength="3">
+      <p>Leiblingsspeisen</p>
+      <!--  Chekboxen-->
+      <label>Fischstäbchen<input type="checkbox" name="speisen[]" value="Fischstäbchen"></label>
+      <label>Pizza <input type="checkbox" name="speisen[]" value="Pizza"></label> <br>
+      <!-- Dropdown -->
+      <label for="ortschaft">Wo Wohnen Sie?</label> <br>
+      <select name="ortschaft" id="ortschaft" size="5"> <br>
+        <option disabled selected>Bitte Treffen Sie eine Auswahl</option> <!-- vorauswahl mit Selected möglich-->
+        <option value="dorf">Dorf</option>
+        <option value="Stadt">Stadt</option>
+      </select> <br>
+      <label for="streaming">Welchen Straeming dienst nutzen Sie?</label> <br>
+      <select name="streaming[]" id="streaming" multiple>
+        <optiongroop lable="Video streaming">
+          <option value="netflix">Netflix</option>
+          <option value="prime">Amazon Prime</option>
+          <option value="disney">Disney Plus</option>
+          <option value="yt">Youtube</option>
+        </optiongroop>
+        <optiongroop lable="Audio streaming">
+          <option value="m-yt">Youtube MUsic</option>
+          <option value="Spotify">Spotify</option>
+          <option value="AMUsic">Apple MUsic</option>
+        </optiongroop>
+      </select> <br>
+      <p><label for="messege">Ihre Nachricht</label></p>
+      <textarea name="messege" id=",messege"></textarea>
+      <p><button type="submit">Senden</button></p>
+      <button type="reset">Reset</button>
+  </form>
+  </fieldset>
 
+  <input type="text" name="messege" form="kontaktformular">
+  <!--wenn verschieden radio dann imer gleien namen wählen um  zusammenhang zu value =""-->
 </body>
+
 </html>
