@@ -4,58 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stad Land Fluss</title>
+    <title>Stadt Land Fluss</title>
+    <style>
+        /* Grunddesign der Tabelle */
+        table {
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            padding: 15px 25px;
+            min-width: 100px;
+        }
+
+        caption h1 {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        thead th {
+            background-color: #90ee90;
+            /* Hellgrün */
+            padding: 20px 10px;
+        }
+
+        .info-zeile td {
+            border: none;
+        }
+
+        #klein {
+            font-size: 13px;
+            font-weight: bold;
+            background-color: #90ee90;
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #d3d3d3;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #a0b2d6;
+        }
+
+        tfoot tr td {
+            border: none;
+        }
+
+        tfoot .unten {
+            font-weight: bold;
+            text-decoration: underline;
+            background-color: #90ee90;
+            border: 2px solid black;
+        }
+    </style>
 </head>
-<style>
-    table {
-        border-collapse: collapse;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid gray;
-        padding: 3px;
-    }
-
-    thead {
-        font-weight: bold;
-    }
-
-    .unten {
-        font-weight: bold;
-        text-decoration: underline;
-    }
-
-    #klein {
-        font-size: small;
-    }
-</style>
 
 <body>
     <main>
         <table>
             <caption>
-                <h1>Stad Land Fluss</h1>
+                <h1>Stadt Land Fluss</h1>
             </caption>
             <thead>
-                <td> Buchstaben </td>
-                <td>Stadt</td>
-                <td>Land</td>
-                <td>Fluss</td>
-                <td>Gemüse</td>
-                <td>Obst</td>
-                <td>Punkte</td>
+                <tr>
+                    <th>Buchstabe</th>
+                    <th>Stadt</th>
+                    <th>Land</th>
+                    <th>Fluss</th>
+                    <th>Obst</th>
+                    <th>Gemüse</th>
+                    <th>Punkte</th>
+                </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td id="klein">0,10 oder 20 Punkte Pro Item</td>
+                <!-- Die Info-Zeile nutzt colspan="6" für die leere Fläche, damit nichts verrutscht -->
+                <tr class="info-zeile">
+                    <td colspan="6"></td>
+                    <td id="klein">0, 10 oder 20<br>Punkte je Item</td>
                 </tr>
                 <tr>
                     <td>"F"</td>
@@ -67,7 +98,7 @@
                     <td>30</td>
                 </tr>
                 <tr>
-                    <td>"k"</td>
+                    <td>"K"</td>
                     <td>Koblenz</td>
                     <td>Kroatien</td>
                     <td>Kongo</td>
@@ -79,14 +110,14 @@
                     <td>"N"</td>
                     <td>Nürnberg</td>
                     <td>Norwegen</td>
-                    <td>Necktar</td>
-                    <td>Necktarine</td>
+                    <td>Neckar</td>
+                    <td>Nektarine</td>
                     <td>-</td>
                     <td>40</td>
                 </tr>
                 <tr>
                     <td>"H"</td>
-                    <td>Heideberg</td>
+                    <td>Beidelberg</td>
                     <td>Honduras</td>
                     <td>Hase</td>
                     <td>Heidelbeere</td>
@@ -94,18 +125,14 @@
                     <td>60</td>
                 </tr>
             </tbody>
-            <tfooter>
+            <tfoot>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="unten">Gesamtpunkte</td>
-                    <td class="unten">180</td>
+                    <!-- colspan="5" überspringt die ersten 5 Spalten sauber ohne unsichtbare TDs -->
+                    <td colspan="5"></td>
+                    <td class="unten"><u>Gesamtpunkte</u></td>
+                    <td class="unten"><u>180 Punkte</u></td>
                 </tr>
-            </tfooter>
-
+            </tfoot>
         </table>
     </main>
 </body>
