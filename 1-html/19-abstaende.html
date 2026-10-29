@@ -7,12 +7,43 @@
   <title>Abstände und Shorthand</title>
   <style>
     div { height: 70px; }
-    #eins { background-color: #ac0035; }
+    #eins { background-color: #ac0035;
+    margin-bottom: 15px; }
 
     #zwei {
       background-color: #ed9c53;
+      /* ? === Außenabstände überlappen sich === */
 
-      
+      margin-top: 10px;
+      /* ? === Shorthand für margin (gibt es esbenso für padding) === */
+      /* 1) 
+      alle seiten gleich */
+      margin: 20;
+
+      /* 2) 
+      wert 1 vertikaler, 
+      wert 2 hochizontal abstand*/
+      margin: 20px 40px;
+
+      /* 3) 
+      wert 1: oberer abstand
+      wert 2: hochizontaler abstand
+      wert 3: unterer abstand 
+      */
+      margin: 20px 40px 50px;
+
+      /* 4)
+      wert 1: oberer abstand
+      folgende werte im uhrzeigersinn 
+       */
+       margin: 20px 30px 40px 50px;
+
+       /* vertikale Abstände */
+       margin-block: 30px 50px;
+
+       /* hochizontale Abstände
+       wert 1: Start , Wert 2: Ende */
+      margin-inline: 20px 30px ;
     }
 
     #drei { background-color: #cccca5; }
