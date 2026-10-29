@@ -1,9 +1,26 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: #292d33;
+    background-color: #f5f6f8;
+}
+
+h1,
+h2,
+h3 {
+    color: #273c55;
 }
 
 a {
-    color: orange;
+    color: #315e91;
     text-decoration: none;
+}
+
+a:hover {
+    color: #a14b39;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
