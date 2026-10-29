@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabellen mit CSS</title>
-  
+
 </head>
+
 <body>
   <h1>Tabellen mit CSS layouten</h1>
+  <style>
+    body {
+      background: #fcdd3163 url("images/graphic/band.gif") no-repeat center;
+    }
 
+
+    table {
+      border: 2px solid #a00;
+      /* Rahmen Zusammenfassen */
+      border-collapse: collapse;
+    }
+
+    /*  */
+    tr:nth-child(even) {
+      background-color: #242427;
+      color: white;
+    }
+
+    th,
+    td {
+      border: 1px solid #a00;
+      padding: 5px;
+    }
+
+    thead tr {
+      background-color: #0e1f74;
+      color: #fff;
+    }
+  </style>
   <table>
     <thead>
       <tr>
@@ -48,4 +78,5 @@
     </tbody>
   </table>
 </body>
+
 </html>

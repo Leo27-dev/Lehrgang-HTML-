@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hintergrundbild mit img</title>
   <style>
-    
+    html,
+    body,
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    header {
+      color: #ffff;
+      padding: 24px 16px;
+
+    }
+
+    .header-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      min-height: 100vh;
+      width: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Überschrift</h1>
     <img class="header-img" src="images/fitness-header.jpg" alt="Mann im Fitness-Studio">
   </header>
 </body>
+
 </html>
