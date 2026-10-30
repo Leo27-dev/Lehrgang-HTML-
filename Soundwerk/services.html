@@ -11,53 +11,106 @@
 </head>
 
 <body>
-  <header>
+  <header class="site-header">
+    <div class="container">
+      
+      <div class="logo">
+        <svg viewbox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+          <text font-family="Arial" font-size="32" x="0" y="50">
+            SoundWerk
+          </text>
+          <text font-family="Arial" font-size="14" x="0" y="70">
+            Studio
+          </text>
+          <path d="M220 40a20 20 0 0 1 40 0" fill="none" stroke-width="4"></path>
+          <rect height="16" rx="3" width="8" x="215" y="40"></rect>
+          <rect height="16" rx="3" width="8" x="257" y="40"></rect>
+        </svg>
+      </div>
 
-    <nav>
-      <p>|
-        <a href="index.html">Startseite</a> |
-        <a href="about.html">Über uns</a> |
-        <a href="services.html">Angebote</a> |
-        <a href="contact.html">Kontakt</a> |
-      </p>
-    </nav>
-    <h1>Angebote</h1>
-    <p>Unsere Leistungen im Überblick.</p>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a class="active" href="services.html">Angebote</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
 
-    <h2>Preisübersicht</h2>
-    <table>
-      <caption>Leistungen und Preise</caption>
-      <thead>
-        <tr>
-          <th>Leistung</th>
-          <th>Dauer</th>
-          <th>Preis</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Proberaum</td>
-          <td>1 Stunde</td>
-          <td>10 €</td>
-        </tr>
-        <tr>
-          <td>Aufnahme</td>
-          <td>1 Stunde</td>
-          <td>50 €</td>
-        </tr>
-        <tr>
-          <td>Coaching</td>
-          <td>1 Stunde</td>
-          <td>30 €</td>
-        </tr>
-      </tbody>
-    </table>
+    <section class="page-header">
+      <div class="container">
+        <h1>Unsere Leistungen</h1>
+        <p>Unsere Leistungen im Überblick.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Preisübersicht</h2>
+        <div class="table-wrapper">
+          <table>
+            <caption>Leistungen und Preise</caption>
+            <thead>
+              <tr>
+                <th>Leistung</th>
+                <th>Dauer</th>
+                <th>Preis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Proberaum</td>
+                <td>1 Stunde</td>
+                <td>10 €</td>
+              </tr>
+              <tr>
+                <td>Aufnahme</td>
+                <td>1 Stunde</td>
+                <td>50 €</td>
+              </tr>
+              <tr>
+                <td>Coaching</td>
+                <td>1 Stunde</td>
+                <td>30 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    &copy; SoundWerk Studio 2026
+  
+  <footer class="site-footer">
+    <div class="container">
+
+      <div>
+        <h2>Soundwerk Studio</h2>
+        <p>Proberaum, Recording und Coaching für Musiker.</p>
+      </div>
+
+      <div>
+        <h2>Navigation</h2>
+        <ul class="footer-nav">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="services.html">Angebote</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Kontakt</h2>
+        <address>
+          E-Mail: info@soundwerk-studio.de<br>
+          Telefon: 0361 1234567
+        </address>
+      </div>
+
+    </div>
   </footer>
 
 </body>

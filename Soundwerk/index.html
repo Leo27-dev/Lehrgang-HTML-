@@ -2,56 +2,117 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="SoundWerk Studio – Proberaum, Recording und Coaching für Musiker und Bands. Kreative Umgebung und modern ausgestattete Räume.">
-    <title>SoundWerk Studio | Startseite</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta
+    content="SoundWerk Studio bietet Proberäume, Recording und Coaching für Bands und Solokünstler. Entdecke unsere Räume, Musikangebote und persönlichen Service in Erfurt."
+    name="description">
+  <title>SoundWerk Studio | Startseite</title>
+  <link href="css/styles.css" rel="stylesheet">
 </head>
-<header>
-    <nav>
-        <ul>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="services.html">Angebote</a> |</li>
-        </ul>
-    </nav>
-</header>
 
 <body>
-    <header>
-        <h1>SoundWerk Studio</h1>
-    </header>
+  <header class="site-header">
+    <div class="container">
+      
+      <div class="logo">
+        <svg viewbox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+          <text font-family="Arial" font-size="32" x="0" y="50">
+            SoundWerk
+          </text>
+          <text font-family="Arial" font-size="14" x="0" y="70">
+            Studio
+          </text>
+          <path d="M220 40a20 20 0 0 1 40 0" fill="none" stroke-width="4"></path>
+          <rect height="16" rx="3" width="8" x="215" y="40"></rect>
+          <rect height="16" rx="3" width="8" x="257" y="40"></rect>
+        </svg>
+      </div>
 
-    <main>
-        <figure>
-            <img src="images/studio.jpg" alt="Aufnahmeraum im SoundWerk Studio">
-        </figure>
-
-        <h2>Dein Raum für Musik, Ideen und Aufnahmen</h2>
-
-        <p>Willkommen im SoundWerk Studio. Wir bieten professionelle Proberäume, Recording, Coaching und eine kreative
-            Umgebung für Bands, Solokünstler und Musikprojekte.</p>
-
-        <p>Egal, ob du deine erste Single aufnehmen, den perfekten Sound für dein Album mischen oder in professioneller
-            Atmosphäre proben möchtest – bei uns findest du das passende Equipment und die nötige Ruhe, um deine
-            musikalischen Visionen Wirklichkeit werden zu lassen.</p>
-
-        <h3>Unsere Leistungen im Überblick:</h3>
+      <nav class="site-nav" aria-label="Hauptnavigation">
         <ul>
-            <li>Modern ausgestattete Proberäume mit flexiblem Zugang</li>
-            <li>Professionelles Recording, Mixing und Mastering</li>
-            <li>Individuelles Band-Coaching und Musikproduktion</li>
+          <li><a class="active" href="index.html">Startseite</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="services.html">Angebote</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
 
-        <figure>
-            <img src="images/room.jpg" alt="Unser Proberaum für Bands und Sessions">
+  <main>
+
+    <section class="hero">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <h1>Dein Raum für Musik, Ideen und Aufnahmen</h1>
+          <p>
+            Willkommen im SoundWerk Studio. Wir bieten Proberäume,
+            Recording, Coaching und eine kreative Umgebung für Bands,
+            Solokünstler und Musikprojekte.
+          </p>
+          <a class="button" href="services.html">Unsere Angebote</a>
+        </div>
+
+        <figure class="hero-image">
+          <img src="images/studio.jpg" alt="Aufnahmeraum im SoundWerk Studio">
         </figure>
-    </main>
 
-    <footer>
-        <p>&copy; SoundWerk Studio – Proberaum, Recording und Coaching für Musiker.</p>
-    </footer>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Warum SoundWerk?</h2>
+        <p>
+          Unser Studio verbindet Technik, Kreativität und eine entspannte
+          Arbeitsatmosphäre. Bei uns kannst Du proben, aufnehmen und Ideen
+          gemeinsam weiterentwickeln.
+        </p>
+        <ul class="check-list">
+          <li>zentrale Lage</li>
+          <li>faire Preise</li>
+          <li>freundliche Betreuung</li>
+          <li>geeignet für Einzelpersonen und Bands</li>
+        </ul>
+        <figure>
+          <img alt="Proberaum mit Instrumenten" src="images/room.jpg">
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div>
+        <h2>Soundwerk Studio</h2>
+        <p>Proberaum, Recording und Coaching für Musiker.</p>
+      </div>
+
+      <div>
+        <h2>Navigation</h2>
+        <ul class="footer-nav">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="services.html">Angebote</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Kontakt</h2>
+        <address>
+          E-Mail: info@soundwerk-studio.de<br>
+          Telefon: 0361 1234567
+        </address>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 
 </html>
