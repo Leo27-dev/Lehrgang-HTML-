@@ -1,0 +1,89 @@
+body {
+    font-family: sans-serif;
+}
+
+section {
+    padding: 10px;
+}
+
+/* Attrebut-Selektoren */
+a[target] {
+    color: red
+}
+
+section[id="about"] {
+    background-color: rgba(128, 0, 0, 5);
+}
+
+a[href^="https://"]::after {
+    content: " @";
+
+}
+
+/* Pseudo-Klassen */
+/*unbesuchte links  */
+a:link {
+    color: orange;
+}
+
+/* besuchte links  */
+a:visited {
+    color: red;
+}
+
+
+a:hover {
+    color: blue;
+}
+
+/* Link in den Fokus  */
+a:focus {
+    color: darkgrey !important
+}
+
+/*  Link ist aktiv*/
+a:active {
+    color: #9999
+}
+
+p:first-child {
+    font-style: italic;
+}
+
+p:first-of-type {
+    font-style: italic;
+}
+
+/* Pseudo-Elemente */
+footer p::first-letter {
+    color: green;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+section p::first-line {
+    background-color: green;
+}
+
+::selection {
+    background-color: darkgreen;
+    color: red;
+}
+
+/* Kombinatoren */
+/* Nachfahren Selektor*/
+header {
+    color: red;
+}
+/* Kind Selector*/
+header > p {
+    color: blue;
+}
+/* Geschwister-Selektor */
+h2 ~ p {
+    color: blue;
+}
+/* Nachbar-Selektor */
+h2 + p {
+    color: lightgoldenrodyellow; 
+}
