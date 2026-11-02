@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menü</title>
   <style>
-    div { text-align: center; }
-    body > div {
+    div {
+      text-align: center;
+    }
+
+    body>div {
       border: 1px solid red;
       width: 100px;
       height: 20px;
       padding: 5px;
+
+      display: inline-block;
+      position: relative;
     }
 
-    
+    body>div>div {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
 
-    body > div > div > div {
+
+
+    body>div>div>div {
       border: 1px solid green;
       padding: 5px;
       margin-top: 5px;
@@ -24,12 +37,13 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Ebene 1 -->
   <div>Eins</div>
   <div>Zwei</div>
   <div>Drei
-    
+
     <!-- Ebene 2 -->
     <div>
 
@@ -44,4 +58,5 @@
   <div>Vier</div>
   <!-- <div>Fünf</div> -->
 </body>
+
 </html>
