@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elemente positionieren</title>
   <style>
-    body {margin: 0;}
+    body {
+      margin: 0;
+    }
 
     #eins {
       width: 100px;
       height: 200px;
       background-color: greenyellow;
+      position: relative;
+      /*   (abselut) orginaler platz wird frei und von andene eingenommen 
+      + wird in der z achse nach vorne gesetzt (immer im vodregrund)      */
+      /* bei relativ genauso wie abselut nur platz wird nicht frei */
+      /* top: 50px;
+      left: 100px; */
+
     }
 
     #zwei {
       width: 400px;
-      height: 200px;
+      height: 2000px;
       background-color: rgba(255, 99, 71, .5);
+      /* position: absolute;
+      top: 50px;
+      left: 50px; */
+      /* position: relative;
+      top: 50px;
+      left: 150px; */
     }
 
     #drei {
       width: 150px;
       height: 100px;
       background-color: lightblue;
+      /* position: absolute;
+      top: 50px;
+      left: 50px; */
+      /* position:  fixed;  fixed bleibt auch beim scrollen auf seiner position bestehen  */
+      position: sticky;
+      /*   Wie fixed + abstand zu rand einstellbar bei dem sich position relativ zu rand nicht mehr verändert*/
+      top: 50px;
     }
   </style>
 </head>
+
 <body>
   <div id="eins">Eins</div>
   <div id="zwei">
@@ -34,4 +58,5 @@
     Zwei
   </div>
 </body>
+
 </html>
