@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Websites responsive</title>
   <style>
     /* Basis */
-    body { font-family: sans-serif; }
+    body {
+      font-family: sans-serif;
+    }
 
-    
+    /* === mobile-first: Optimierung für Smartphones === */
+    h1 {
+      font-weight: 300;
+      color: brown;
+      font-size: 1.5rem;
+    }
 
-    
+    .tablet,
+    .desktop {
+      display: none;
+    }
+
+    /* === Optimierung für Tablets === */
+    @media screen and (min-width: 576px) {
+      h1 {
+        color: blue;
+        font-size: 2rem;
+      }
+
+      /* Klassen müssen außerhalb von h1 stehen */
+      .mobile {
+        display: none;
+      }
+
+      .tablet {
+        display: block;
+        /* Zeigt das Tablet-Element auf Tablets an */
+      }
+    }
+
+    /* === Optimierung für Desktop === */
+    @media screen and (min-width: 929px) {
+      h1 {
+        color: darkgoldenrod;
+        font-size: 3rem;
+      }
+
+      .mobile,
+      .tablet {
+        display: none;
+      }
+
+      .desktop {
+        display: block;
+        /* Zeigt das Desktop-Element auf großen Bildschirmen an */
+      }
+    }
   </style>
+
 </head>
+
 <body>
   <h1>Websites responsive</h1>
 
@@ -22,4 +71,5 @@
 
   <p class="desktop">Dieser Absatz ist nur auf <b>großen Desktop-Monitoren</b> sichtbar.</p>
 </body>
+
 </html>
