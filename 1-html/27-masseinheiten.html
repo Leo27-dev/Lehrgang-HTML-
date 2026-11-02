@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
   <link rel="stylesheet" href="style.css" media="screen">
   <link rel="stylesheet" href="print.css" media="print">
   <style>
-
     /** Absolute Maßeinheiten
     
     Pixel       (px)
@@ -37,10 +37,48 @@
     Viewport-Höhe (vw, vh)
         bezieht sich auf die Größe des sichtbaren Bereiches des Browserfensters
     */
+    style html {
+      box-sizing: border-box;
+      font-size: 32px;
+    }
 
-    
+    div {
+      border: 2px solid green;
+      width: 50%;
+      height: 50%;
+      font-size: 0.75em;
+    }
+
+    p {
+      font-size: 0.5em;
+
+    }
+
+    .basis {
+      font-size: 0, 5rem;
+    }
+
+    .vw {
+      width: 50vw;
+      height: 50vh;
+    }
+
+    @media print {
+      html: {
+        font-size: 12pt;
+      }
+
+      width: 210mm;
+      border-width: 5px;
+
+      div {
+        border-color: brown;
+        border-width: 5px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <h1>Maßeinheiten in CSS</h1>
@@ -60,4 +98,5 @@
   </div>
 
 </body>
+
 </html>
