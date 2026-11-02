@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flexbox: order</title>
   <style>
-    nav     { background-color: #0a0; height: 35px; }
-    header  { background-color: #a00; height: 200px; }
-    main    { background-color: #aa0;  height: 60vh;  }
-    footer  { background-color: #00a; height: 200px; color: #fff; }
+    nav {
+      background-color: #0a0;
+      height: 35px;
+    }
 
-    header, nav, main, footer { margin-bottom: 5px; border: 1px solid gray; }
+    header {
+      background-color: #a00;
+      height: 200px;
+    }
+
+    main {
+      background-color: #aa0;
+      height: 60vh;
+    }
+
+    footer {
+      background-color: #00a;
+      height: 200px;
+      color: #fff;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      margin-bottom: 5px;
+      border: 1px solid gray;
+    }
 
     /* Flex it */
-    
+    body {
+      display: flex;
+      /* KORRIGIERT: 'felx' zu 'flex' */
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* KORRIGIERT: Präzise Reihenfolge für oben */
+    header {
+      order: -2;
+      /* Ganz oben */
+    }
+
+    nav {
+      order: -1;
+      /* Direkt unter dem Header, aber vor Main */
+    }
   </style>
+
 </head>
 
 <body>
