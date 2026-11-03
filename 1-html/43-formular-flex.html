@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flexbox - Kontaktformular</title>
   <style>
-
     /* === Grundformatierung === */
     html,
     * {
@@ -69,7 +68,26 @@
     }
 
     /* Flex it */
-    
+    form>div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    label {
+      flex: 0 8rem;
+
+    }
+
+    input,
+    textarea,
+    {
+    flex: 1;
+    }
+
+    button {
+      flex: 1;
+      margin-left: auto;
+    }
   </style>
 </head>
 
