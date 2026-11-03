@@ -8,90 +8,93 @@
         content="Nehmen Sie Kontakt mit dem Stadtgarten Freiburg e. V. auf. Stellen Sie Anfragen zu Mitgliedschaften, Spenden oder allgemeinen Informationen.">
     <title>Kontakt | Stadtgarten Freiburg</title>
     <link rel="stylesheet" href="style/style.css">
-
 </head>
 
 <body>
 
     <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <p class="site-title">Stadtgarten Freiburg</p>
-        <p class="slogan">Erleben, Lernen und Entspannen im Grünen</p>
+        <h1>Stadtgarten Freiburg</h1>
+        <p>Erleben, Lernen und Entspannen im Grünen</p>
 
         <nav aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="./index.html">Zurück zur Homepage</a></li>
-                <li><a href="angebote.html">Unsere Angebote</a></li>
-                <li><a href="termine.html">Veranstaltungen &amp; Termine</a></li>
-                <li><a href="contact.html" aria-current="page">Kontakt</a></li>
-            </ul>
+            <!-- Die Links nutzen direkt die Flexbox-Struktur deines CSS -->
+            <a href="./index.html">Zurück zur Homepage</a>
+            <a href="angebote.html">Unsere Angebote</a>
+            <a href="termine.html">Veranstaltungen &amp; Termine</a>
+            <a href="contact.html" aria-current="page">Kontakt</a>
         </nav>
     </header>
 
     <!-- 2. HAUPTINHALT -->
     <main>
-        <h1>Kontakt</h1>
+        <!-- Das Kontaktformular wird durch dein CSS (max-width & margin: auto) perfekt zentriert -->
+        <div class="kontakt-formular">
+            <h1>Kontakt</h1>
 
-        <!-- Adresse des Vereins -->
-        <section aria-labelledby="adresse-titel">
-            <h2 id="adresse-titel" class="visually-hidden">Unsere Anschrift</h2>
-            <address>
-                <strong>Stadtgarten Freiburg e. V.</strong><br>
-                Am Rosengarten 1<br>
-                79104 Freiburg im Breisgau<br>
-                Telefon: 0761 1234567 <!-- Vorwahl für Freiburg von 03641 auf 0761 korrigiert -->
-            </address>
-        </section>
+            <!-- Adresse des Vereins -->
+            <section aria-labelledby="adresse-titel">
+                <h2 id="adresse-titel" class="visually-hidden">Unsere Anschrift</h2>
+                <address>
+                    <strong>Stadtgarten Freiburg e. V.</strong><br>
+                    Am Rosengarten 1<br>
+                    79104 Freiburg im Breisgau<br>
+                    Telefon: 0761 1234567
+                </address>
+            </section>
 
-        <!-- Kontaktformular -->
-        <section aria-labelledby="form-titel">
-            <h2 id="form-titel">Kontaktieren Sie uns!</h2>
+            <!-- Kontaktformular -->
+            <section aria-labelledby="form-titel">
+                <h2 id="form-titel">Kontaktieren Sie uns!</h2>
 
-            <form action="#" method="POST">
-                <p>
-                    <label for="vname">Vorname:*</label><br>
-                    <input type="text" name="vname" id="vname" placeholder="Dein Vorname" required>
-                </p>
-                <p>
-                    <label for="fname">Nachname:*</label><br>
-                    <input type="text" name="fname" id="fname" placeholder="Dein Nachname" required>
-                </p>
-                <p>
-                    <label for="age">Alter:</label><br>
-                    <input type="number" name="age" id="age" min="1">
-                </p>
+                <form action="#" method="POST">
+                    <div class="form-gruppe">
+                        <label for="vname">Vorname:*</label>
+                        <input type="text" name="vname" id="vname" placeholder="Dein Vorname" required>
+                    </div>
 
-                <p>
-                    <label for="email">E-Mail:*</label><br>
-                    <input type="email" name="email" id="email" placeholder="beispiel@mail.de" required>
-                </p>
+                    <div class="form-gruppe">
+                        <label for="fname">Nachname:*</label>
+                        <input type="text" name="fname" id="fname" placeholder="Dein Nachname" required>
+                    </div>
 
-                <p>
-                    <label for="anfrage">Grund der Anfrage:*</label><br>
-                    <select name="anfrage" id="anfrage" required>
-                        <option value="" selected disabled>Bitte einen Grund auswählen</option>
-                        <option value="mAntrag">Mitglied-Antrag</option>
-                        <option value="spenden">Spenden</option>
-                        <option value="info">Informationen</option>
-                    </select>
-                </p>
+                    <div class="form-gruppe">
+                        <label for="age">Alter:</label>
+                        <input type="number" name="age" id="age" min="1">
+                    </div>
 
-                <!-- Nachricht (Korrektur: id zugewiesen und mit label verknüpft) -->
-                <p>
-                    <label for="nachricht">Ihre Nachricht:*</label><br>
-                    <textarea name="nachricht" id="nachricht" rows="5" cols="40" placeholder="Schreiben Sie uns..."
-                        required></textarea>
-                </p>
+                    <div class="form-gruppe">
+                        <label for="email">E-Mail:*</label>
+                        <input type="email" name="email" id="email" placeholder="beispiel@mail.de" required>
+                    </div>
 
-                <!-- Buttons -->
-                <p>
-                    <button type="submit">Absenden</button>
-                    <button type="reset">Zurücksetzen</button>
-                </p>
+                    <div class="form-gruppe">
+                        <label for="anfrage">Grund der Anfrage:*</label>
+                        <select name="anfrage" id="anfrage" required
+                            style="width: 100%; padding: 8px; border: 1px solid #D5DBDB;">
+                            <option value="" selected disabled>Bitte einen Grund auswählen</option>
+                            <option value="mAntrag">Mitglied-Antrag</option>
+                            <option value="spenden">Spenden</option>
+                            <option value="info">Informationen</option>
+                        </select>
+                    </div>
 
-                <p><small>* Diese Felder sind verpflichtend</small></p>
-            </form>
-        </section>
+                    <div class="form-gruppe">
+                        <label for="nachricht">Ihre Nachricht:*</label>
+                        <textarea name="nachricht" id="nachricht" rows="5" placeholder="Schreiben Sie uns..."
+                            required></textarea>
+                    </div>
+
+                    <!-- Buttons mit deiner orangenen .btn-aktion CSS-Klasse -->
+                    <div class="form-gruppe">
+                        <button type="submit" class="btn-aktion" style="margin-bottom: 10px;">Absenden</button>
+                        <button type="reset" class="btn-aktion" style="background-color: #7F8C8D;">Zurücksetzen</button>
+                    </div>
+
+                    <p><small>* Diese Felder sind verpflichtend</small></p>
+                </form>
+            </section>
+        </div>
     </main>
 
     <!-- 3. FUSSBREICH -->

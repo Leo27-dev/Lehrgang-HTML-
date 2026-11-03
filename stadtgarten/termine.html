@@ -6,24 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Entdecke die Angebote im Stadtgarten Freiburg: Von Garten-Patenschaften und Workshops über Saatgut-Tauschbörsen bis hin zu entspannendem Garten-Yoga im Grünen.">
-    <title>Unsere Angebote | Stadtgarten Freiburg</title>
+    <title>Veranstaltungen &amp; Termine | Stadtgarten Freiburg</title>
     <link rel="stylesheet" href="style/style.css">
-
 </head>
 
 <body>
 
     <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <p class="site-title">Stadtgarten Freiburg</p>
-        <p class="slogan">Erleben, Lernen und Entspannen im Grünen</p>
+        <h1>Stadtgarten Freiburg</h1>
+        <p>Erleben, Lernen und Entspannen im Grünen</p>
 
         <nav aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="./index.html">Zurück zur Homepage</a></li>
-                <li><a href="./angebote.html"></a>Zu unseren Angeboten</li>
-                <li><a href="contact.html">Kontakt</a></li>
-            </ul>
+            <a href="index.html">Startseite</a>
+            <a href="angebote.html">Unsere Angebote</a>
+            <a href="termine.html" aria-current="page">Veranstaltungen &amp; Termine</a>
+            <a href="contact.html">Kontakt</a>
         </nav>
     </header>
 
@@ -33,73 +31,73 @@
         <p>Der Stadtgarten ist mehr als nur ein Park. Entdecke unsere vielfältigen Mitmach-Angebote, Workshops und
             Events für Groß und Klein. Hier ist für jeden Naturliebhaber etwas dabei!</p>
 
-        <!-- HTML-Attribute für die Linien:
-             border="1"      -> Aktiviert die Gitternetzlinien (Standard-Schwarz)
-             cellpadding="8" -> Erzeugt einen sauberen Innenabstand in den Zellen, damit der Text nicht an den Linien klebt
-             width="100%"    -> Streckt die Tabelle über die gesamte Bildschirmbreite -->
-        <table border="1" cellpadding="8" width="100%">
+        <table class="termine-tabelle">
             <caption>Übersicht unserer zusätzlichen Freizeit- und Mitmach-Angebote</caption>
             <thead>
                 <tr>
-                    <th scope="col">Angebot</th>
-                    <th scope="col">Vorschau</th>
-                    <th scope="col">Beschreibung</th>
+                    <th scope="col" style="width: 25%;">Angebot</th>
+                    <th scope="col" style="width: 25%;">Vorschau</th>
+                    <th scope="col" style="width: 50%;">Beschreibung</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Angebot 1 -->
+                <!-- Angebot 1: Hochbeete -->
                 <tr>
-                    <th scope="row" valign="top">Garten-Patenschaften</th>
-                    <td valign="top">
+                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Garten-Patenschaften</th>
+                    <td>
                         <figure style="margin: 0;">
-                            <!-- width="150" stellt sicher, dass das Bild in der Zelle nicht zu groß wird -->
-                            <img src="https://unsplash.com" alt="Familie pflegt gemeinsam ein bepflanztes Hochbeet"
-                                width="150">
+                            <img src="images/hochbeet.webp" alt="Gepflegte Hochbeete in einer Gartenanlage"
+                                style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
                         </figure>
                     </td>
-                    <td valign="top">Übernimm die Patenschaft für dein eigenes Hochbeet! Perfekt für Familien, WGs oder
-                        Einzelpersonen
-                        ohne eigenen Garten. Wir stellen die Erde und das Basis-Saatgut, du erntest dein eigenes
+                    <td>Übernimm die Patenschaft für dein eigenes Hochbeet! Perfekt für Familien, WGs oder
+                        Einzelpersonen ohne eigenen Garten. Wir stellen die Erde und das Basis-Saatgut, du erntest dein
+                        eigenes
                         Bio-Gemüse.
                     </td>
                 </tr>
 
-                <!-- Angebot 2 -->
+                <!-- Angebot 2: Workshops (Neu besetzt mit Bild) -->
                 <tr>
-                    <th scope="row" valign="top">Workshops &amp; Kurse</th>
-                    <td valign="top">
-                        <small>Kein Bild verfügbar</small>
+                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Workshops &amp; Kurse</th>
+                    <td>
+                        <figure style="margin: 0;">
+                            <img src="images/pflanzentisch.jpg" alt="Gartenwerkzeuge und Töpfe auf einem Holztisch"
+                                style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
+                        </figure>
                     </td>
-                    <td valign="top">Lerne von unseren Profis. In regelmäßigen Seminaren erfährst du alles über
-                        nachhaltige Kompostierung,
+                    <td>Lerne von unseren Profis. In regelmäßigen Seminaren erfährst du alles über nachhaltige
+                        Kompostierung,
                         den richtigen Obstbaumschnitt im Frühjahr oder die Kunst des Haltbarmachens durch Fermentierung.
                     </td>
                 </tr>
 
-                <!-- Angebot 3 -->
+                <!-- Angebot 3: Pflanzentausch (Neu besetzt mit Bild) -->
                 <tr>
-                    <th scope="row" valign="top">Saatgut- &amp; Pflanzentausch</th>
-                    <td valign="top">
-                        <small>Kein Bild verfügbar</small>
+                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Saatgut- &amp; Pflanzentausch</th>
+                    <td>
+                        <figure style="margin: 0;">
+                            <img src="images/setzlinge.jpg" Kleine grüne Pflanzensetzlinge in einer Reihe"
+                                style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
+                        </figure>
                     </td>
-                    <td valign="top">Jedes Frühjahr treffen wir uns zum großen Austausch. Bringe deine überschüssigen
-                        Setzlinge oder
+                    <td>Jedes Frühjahr treffen wir uns zum großen Austausch. Bringe deine überschüssigen Setzlinge oder
                         gesammeltes, samenfestes Saatgut mit und tausche es gegen neue, spannende Raritäten für dein
                         Beet.
                     </td>
                 </tr>
 
-                <!-- Angebot 4 -->
+                <!-- Angebot 4: Yoga -->
                 <tr>
-                    <th scope="row" valign="top">Garten-Yoga</th>
-                    <td valign="top">
+                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Garten-Yoga</th>
+                    <td>
                         <figure style="margin: 0;">
-                            <img src="https://unsplash.com" alt="Eine Gruppe Menschen macht Yoga auf einer grünen Wiese"
-                                width="150">
+                            <img src="images/yoga_park.jpg" Person praktiziert Yoga im Freien auf einer Wiese"
+                                style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
                         </figure>
                     </td>
-                    <td valign="top">Finde deine innere Ruhe inmitten blühender Beete. Unsere zertifizierten Trainer
-                        leiten dich durch
+                    <td>Finde deine innere Ruhe inmitten blühender Beete. Unsere zertifizierten Trainer leiten dich
+                        durch
                         entspannende Hatha-Yoga-Stunden an der frischen Luft. Perfekt, um dem stressigen Stadtalltag zu
                         entfliehen.
                     </td>

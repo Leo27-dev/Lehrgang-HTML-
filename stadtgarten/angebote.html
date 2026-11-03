@@ -5,76 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Entdecke die Angebote im Stadtgarten Freiburg: Von Garten-Patenschaften und Workshops über Saatgut-Tauschbörsen bis hin zu entspannendem Garten-Yoga im Grünen.">
+        content="Entdecken Sie die Angebote des Stadtgartens Freiburg. Von geführten Rundgängen über Pflanzenverkäufe bis hin zu kreativen Fotografie-Workshops.">
     <title>Unsere Angebote | Stadtgarten Freiburg</title>
     <link rel="stylesheet" href="style/style.css">
-
 </head>
 
 <body>
 
+    <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <p class="site-title">Stadtgarten Freiburg</p>
-        <p class="slogan">Erleben, Lernen und Entspannen im Grünen</p>
+        <h1>Stadtgarten Freiburg</h1>
+        <p>Erleben, Lernen und Entspannen im Grünen</p>
 
         <nav aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="./index.html">Zurück zur Homepage</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="termine.html">Veranstaltungen &amp; Termine</a></li>
-                
-            </ul>
+            <!-- Einheitliche Beschriftung "Startseite" für eine konsistente Navigation -->
+            <a href="index.html">Startseite</a>
+            <a href="angebote.html" aria-current="page">Unsere Angebote</a>
+            <a href="termine.html">Veranstaltungen &amp; Termine</a>
+            <a href="contact.html">Kontakt</a>
         </nav>
     </header>
 
+    <!-- 2. HAUPTINHALT -->
     <main>
-        <h1>Unsere zusätzlichen Angebote</h1>
-        <p>Der Stadtgarten ist mehr als nur ein Park. Entdecke unsere vielfältigen Mitmach-Angebote, Workshops und
-            Events für Groß und Klein. Hier ist für jeden Naturliebhaber etwas dabei!</p>
+        <h1>Unsere Angebote</h1>
 
-        <!-- Die Angebote sind nun wieder als klassische Liste strukturiert -->
-        <ul>
+        <!-- Info-Box für aktuelle Hinweise (Kapitel 25: CSS Box-Modell) -->
+        <div class="hinweis-box">
+            <strong>Wichtiger Hinweis:</strong> Für alle Workshops und Führungen ist eine vorherige Anmeldung über unser
+            Kontaktformular erforderlich. Die Teilnehmerzahl ist begrenzt.
+        </div>
+
+        <!-- Flexbox-Container für die dreispaltige Ansicht (Kapitel 35-38 & 41) -->
+        <div class="angebote-container">
+
             <!-- Angebot 1 -->
-            <li>
-                <h2>Garten-Patenschaften</h2>
-                <figure>
-                    <img src="https://unsplash.com" alt="Familie pflegt gemeinsam ein bepflanztes Hochbeet">
-                    <figcaption>Gemeinsames Gärtnern am Hochbeet</figcaption>
-                </figure>
-                <p>Übernimm die Patenschaft für dein eigenes Hochbeet! Perfekt für Familien, WGs oder Einzelpersonen
-                    ohne eigenen Garten. Wir stellen die Erde und das Basis-Saatgut, du erntest dein eigenes Bio-Gemüse.
-                </p>
-            </li>
+            <div class="angebot-item">
+                <h3>Gartenführung</h3>
+                <p>Erleben Sie eine botanische Fachführung durch die blühenden Rosen- und Kamelienpfade unseres
+                    Stadtgartens. Lernen Sie Wissenswertes über die Pflege und Herkunft unserer Pflanzen.</p>
+                <a href="contact.html?anfrage=info" class="btn-aktion">Mehr Infos</a>
+            </div>
 
             <!-- Angebot 2 -->
-            <li>
-                <h2>Workshops &amp; Kurse</h2>
-                <p>Lerne von unseren Profis. In regelmäßigen Seminaren erfährst du alles über nachhaltige Kompostierung,
-                    den richtigen Obstbaumschnitt im Frühjahr oder die Kunst des Haltbarmachens durch Fermentierung.</p>
-            </li>
+            <div class="angebot-item">
+                <h3>Fotografie-Workshop</h3>
+                <p>Lernen Sie, wie Sie die Flora und Fauna im perfekten Licht mit Ihrer Kamera einfangen. Unser
+                    Profi-Fotograf zeigt Ihnen die besten Kniffe für beeindruckende Makroaufnahmen.</p>
+                <a href="contact.html?anfrage=info" class="btn-aktion">Buchen</a>
+            </div>
 
             <!-- Angebot 3 -->
-            <li>
-                <h2>Saatgut- &amp; Pflanzentausch</h2>
-                <p>Jedes Frühjahr treffen wir uns zum großen Austausch. Bringe deine überschüssigen Setzlinge oder
-                    gesammeltes, samenfestes Saatgut mit und tausche es gegen neue, spannende Raritäten für dein Beet.
-                </p>
-            </li>
+            <div class="angebot-item">
+                <h3>Pflanzenverkauf</h3>
+                <p>Nehmen Sie ein Stück Natur mit nach Hause. Bei unseren regelmäßigen Aktionstagen verkaufen wir
+                    Ableger, heimische Wildkräuter und exotische Gewächse direkt vor Ort.</p>
+                <a href="contact.html?anfrage=info" class="btn-aktion">Zum Shop</a>
+            </div>
 
-            <!-- Angebot 4 -->
-            <li>
-                <h2>Garten-Yoga</h2>
-                <figure>
-                    <img src="https://unsplash.com" alt="Eine Gruppe Menschen macht Yoga auf einer grünen Wiese">
-                    <figcaption>Entspannung unter freiem Himmel</figcaption>
-                </figure>
-                <p>Finde deine innere Ruhe inmitten blühender Beete. Unsere zertifizierten Trainer leiten dich durch
-                    entspannende Hatha-Yoga-Stunden an der frischen Luft. Perfekt, um dem stressigen Stadtalltag zu
-                    entfliehen.</p>
-            </li>
-        </ul>
+        </div>
     </main>
 
+    <!-- 3. FUSSBREICH -->
     <footer>
         <p>&copy; 2026 Stadtgarten Freiburg</p>
     </footer>

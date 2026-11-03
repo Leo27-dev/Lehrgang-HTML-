@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    /* [Kapitel 25: CSS Box-Modell] */
 }
 
 body {
@@ -11,15 +12,18 @@ body {
     line-height: 1.6;
 }
 
+/* --- Header & Navigation [Kapitel 24, 32-41: Flexbox] --- */
 header {
     background-color: #FFFFFF;
     border-bottom: 3px solid #2E6F40;
     padding: 20px;
+    /* [Kapitel 19: Abstände / 31: Padding] */
 }
 
 header h1,
 header p {
     text-align: center;
+    /* [Kapitel 20: Zentrieren] */
     color: #2E6F40;
     margin: 0 0 10px 0;
 }
@@ -30,15 +34,25 @@ header p {
     margin-bottom: 20px;
 }
 
+/* Flexbox für das Navigations-Menü */
 header nav {
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    /* [Kapitel 32: flex-direction] */
+    flex-wrap: wrap;
+    /* [Kapitel 33: flex-wrap] */
+    justify-content: center;
+    /* [Kapitel 39: align-justify-content] */
+    gap: 20px;
+    /* Moderner Abstand zwischen Flex-Items */
+    padding: 10px 0;
 }
 
 header a {
     color: #2C3E50;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 10px;
+    padding: 5px 10px;
 }
 
 header a:hover {
@@ -46,10 +60,12 @@ header a:hover {
     text-decoration: underline;
 }
 
+/* --- Hauptbereich & Layout [Kapitel 20 & 30: Responsive] --- */
 main {
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
+    /* [Kapitel 20: Zentrieren über Margin Auto] */
     padding: 10px;
 }
 
@@ -63,38 +79,63 @@ main a:hover {
     text-decoration: underline;
 }
 
-footer {
-    background-color: #2C3E50;
+/* --- Hero-Bereich [Kapitel 21: Hintergrundbilder] --- */
+.hero-bereich {
+    background-color: #2E6F40;
+    /* Nutzt das übermittelte Garten-Bild als Hintergrund */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image_jBF77z.png');
+    background-size: cover;
+    /* [Kapitel 21a: Hintergrundbilder] */
+    background-position: center;
     color: #FFFFFF;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 60px 20px;
+    /* Viel Platz durch Padding */
+    margin-bottom: 40px;
 }
 
-footer a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: bold;
+.hero-bereich h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-footer a:hover {
-    color: #E67E22;
-    text-decoration: underline;
+.hero-bereich p {
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
+/* --- Info-Boxen & Angebote [Kapitel 35-38: Flexbox Grid] --- */
 .hinweis-box {
     background-color: #E8F4EC;
     border-left: 5px solid #2E6F40;
+    /* [Kapitel 25: Box-Modell / Border] */
     color: #1E4A2A;
     padding: 15px;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
+/* Container für die Angebote */
+.angebote-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* [Kapitel 33 & 41: Flex-wrap] */
+    gap: 20px;
+    /* Abstand zwischen den Karten */
+    margin-bottom: 30px;
+}
+
+/* Die einzelnen Angebotskarten nebeneinander */
 .angebot-item {
     background-color: #FFFFFF;
     border: 1px solid #D5DBDB;
     padding: 20px;
-    margin-bottom: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    /* [Kapitel 37: flex-grow/-shrink/-basis] */
+    min-width: 280px;
+    /* Verhindert, dass es auf Handys zu quetscht aussieht */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .angebot-item h3 {
@@ -102,14 +143,17 @@ footer a:hover {
     margin-top: 0;
 }
 
+/* --- Buttons & Interaktionen --- */
 .btn-aktion {
     display: inline-block;
     background-color: #E67E22;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-weight: bold;
     border: none;
+    text-align: center;
+    transition: background 0.2s ease;
 }
 
 .btn-aktion:hover {
@@ -117,31 +161,12 @@ footer a:hover {
     text-decoration: none;
 }
 
-.hero-bereich {
-    background-color: #2E6F40;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1200');
-    background-size: cover;
-    background-position: center;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 30px;
-}
-
-.hero-bereich h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.hero-bereich p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
+/* --- Tabellen [Kapitel 12 & 21: Tabellen-CSS] --- */
 .termine-tabelle {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    /* Wichtig für saubere Linien */
+    margin: 30px 0;
 }
 
 .termine-tabelle th {
@@ -156,29 +181,32 @@ footer a:hover {
     border-bottom: 1px solid #D5DBDB;
 }
 
+/* --- Formulare [Kapitel 13: Formulare & 20: Zentrieren] --- */
 .kontakt-formular {
     background-color: #FFFFFF;
     border: 1px solid #D5DBDB;
-    padding: 25px;
+    padding: 30px;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 40px auto;
+    /* [Kapitel 20: Zentriert das gesamte Formular] */
 }
 
 .form-gruppe {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-gruppe label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-weight: bold;
 }
 
 .form-gruppe input,
 .form-gruppe textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #D5DBDB;
+    font-family: inherit;
 }
 
 .kontakt-formular .btn-aktion {
@@ -186,9 +214,11 @@ footer a:hover {
     cursor: pointer;
 }
 
+/* --- Medien- & Definitionslisten [Kapitel 07 & 08] --- */
 img,
 table {
     max-width: 100%;
+    height: auto;
 }
 
 dl dt {
@@ -200,5 +230,34 @@ dl dt {
 
 dl dd {
     margin-left: 200px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #E67E22;
+    text-decoration: underline;
+}
+
+header a[aria-current="page"] {
+    color: #2E6F40;
+    border-bottom: 2px solid #2E6F40;
+}
+
+caption {
+    margin-bottom: 1rem;
 }
