@@ -14,11 +14,52 @@
 
     <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <h1>Stadtgarten Freiburg</h1>
+        <!-- Flex-Wrapper für die horizontale Logo- und Text-Ausrichtung -->
+        <div class="header-brand-wrapper">
+            <div class="logo-brand-block">
+                <div class="logo-container">
+                    <svg xmlns="http://w3.org" viewBox="0 0 400 400" width="100%" height="100%">
+                        <defs>
+                            <!-- Dezenter Farbverlauf für den Stamm -->
+                            <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#4A5D4E" />
+                                <stop offset="100%" stop-color="#2C382F" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Äußere minimalistische Kreis-Geometrie (Rahmen) -->
+                        <circle cx="200" cy="200" r="160" fill="none" stroke="#8FBC8F" stroke-width="4"
+                            stroke-dasharray="10 6" opacity="0.6" />
+
+                        <!-- Baumstamm (Geometrisch & Sauber) -->
+                        <path d="M188 240 L212 240 L208 170 L192 170 Z" fill="url(#trunkGrad)" rx="2" />
+
+                        <!-- Gestaffelte geometrische Blätter (Baumkrone) -->
+                        <circle cx="200" cy="140" r="65" fill="#2E8B57" />
+                        <circle cx="165" cy="155" r="45" fill="#3CB371" />
+                        <circle cx="235" cy="155" r="45" fill="#3CB371" />
+                        <circle cx="200" cy="110" r="40" fill="#66CDAA" />
+
+                        <!-- Kleine Blumen / Akzente am Boden -->
+                        <circle cx="150" cy="245" r="6" fill="#FFB6C1" />
+                        <circle cx="150" cy="245" r="2.5" fill="#FFFACD" />
+
+                        <circle cx="250" cy="245" r="6" fill="#FFB6C1" />
+                        <circle cx="250" cy="245" r="2.5" fill="#FFFACD" />
+
+                        <!-- Stilisierter Boden / Horizont (Minimalistisch) -->
+                        <path d="M 130 250 Q 200 240 270 250" fill="none" stroke="#2C382F" stroke-width="5"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h1>Stadtgarten Freiburg</h1>
+            </div>
+        </div>
+
         <p>Erleben, Lernen und Entspannen im Grünen</p>
 
+        <!-- Die Links liegen jetzt ohne Liste direkt im nav-Tag, damit Flexbox greift -->
         <nav aria-label="Hauptnavigation">
-            <!-- Einheitliche Beschriftung "Startseite" für eine konsistente Navigation -->
             <a href="index.html">Startseite</a>
             <a href="angebote.html" aria-current="page">Unsere Angebote</a>
             <a href="termine.html">Veranstaltungen &amp; Termine</a>
@@ -36,34 +77,76 @@
             Kontaktformular erforderlich. Die Teilnehmerzahl ist begrenzt.
         </div>
 
-        <!-- Flexbox-Container für die dreispaltige Ansicht (Kapitel 35-38 & 41) -->
-        <div class="angebote-container">
-
-            <!-- Angebot 1 -->
-            <div class="angebot-item">
-                <h3>Gartenführung</h3>
-                <p>Erleben Sie eine botanische Fachführung durch die blühenden Rosen- und Kamelienpfade unseres
-                    Stadtgartens. Lernen Sie Wissenswertes über die Pflege und Herkunft unserer Pflanzen.</p>
-                <a href="contact.html?anfrage=info" class="btn-aktion">Mehr Infos</a>
+        <!-- Infosektion mit Gartenkennzahlen -->
+        <section aria-labelledby="kennzahlen-titel" style="margin-bottom: 40px;">
+            <h2 id="kennzahlen-titel">Der Stadtgarten in Zahlen</h2>
+            <div class="card-grid" style="text-align: center;">
+                <div class="card"
+                    style="padding: 20px; background-color: var(--color-surface-alt); border-radius: 8px;">
+                    <span
+                        style="font-size: 2.5rem; font-weight: bold; color: var(--color-primary); display: block; margin-bottom: 5px;">45+</span>
+                    <strong>Gepflegte Beete</strong>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: var(--color-text-main);">Gemüse, Kräuter
+                        &amp; Blumen</p>
+                </div>
+                <div class="card"
+                    style="padding: 20px; background-color: var(--color-surface-alt); border-radius: 8px;">
+                    <span
+                        style="font-size: 2.5rem; font-weight: bold; color: var(--color-primary); display: block; margin-bottom: 5px;">120</span>
+                    <strong>Aktive Mitglieder</strong>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: var(--color-text-main);">Gemeinsam fürs Grüne
+                    </p>
+                </div>
+                <div class="card"
+                    style="padding: 20px; background-color: var(--color-surface-alt); border-radius: 8px;">
+                    <span
+                        style="font-size: 2.5rem; font-weight: bold; color: var(--color-primary); display: block; margin-bottom: 5px;">24</span>
+                    <strong>Workshoptermine</strong>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: var(--color-text-main);">Im laufenden
+                        Kalenderjahr</p>
+                </div>
+                <div class="card"
+                    style="padding: 20px; background-color: var(--color-surface-alt); border-radius: 8px;">
+                    <span
+                        style="font-size: 2.5rem; font-weight: bold; color: var(--color-primary); display: block; margin-bottom: 5px;">8</span>
+                    <strong>Große Pflanzaktionen</strong>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: var(--color-text-main);">Saisonaler
+                        Beetwechsel</p>
+                </div>
             </div>
+        </section>
 
-            <!-- Angebot 2 -->
-            <div class="angebot-item">
-                <h3>Fotografie-Workshop</h3>
-                <p>Lernen Sie, wie Sie die Flora und Fauna im perfekten Licht mit Ihrer Kamera einfangen. Unser
-                    Profi-Fotograf zeigt Ihnen die besten Kniffe für beeindruckende Makroaufnahmen.</p>
-                <a href="contact.html?anfrage=info" class="btn-aktion">Buchen</a>
+        <!-- Hauptangebote (Kacheln nebeneinander mit dunkelgrünem Hintergrund) -->
+        <section aria-labelledby="hauptangebote-titel">
+            <h2 id="hauptangebote-titel" class="visually-hidden">Mitmach-Angebote</h2>
+            <div class="angebote-container">
+
+                <!-- Angebot 1 -->
+                <div class="angebot-item">
+                    <h3>Gartenführung</h3>
+                    <p>Erleben Sie eine botanische Fachführung durch die blühenden Rosen- und Kamelienpfade unseres
+                        Stadtgartens. Lernen Sie Wissenswertes über die pflege und Herkunft unserer Pflanzen.</p>
+                    <a href="contact.html?anfrage=info" class="btn-aktion">Mehr Infos</a>
+                </div>
+
+                <!-- Angebot 2 -->
+                <div class="angebot-item">
+                    <h3>Fotografie-Workshop</h3>
+                    <p>Lernen Sie, wie Sie die Flora und Fauna im perfekten Licht mit Ihrer Kamera einfangen. Unser
+                        Profi-Fotograf zeigt Ihnen die besten Kniffe für beeindruckende Makroaufnahmen.</p>
+                    <a href="contact.html?anfrage=info" class="btn-aktion">Buchen</a>
+                </div>
+
+                <!-- Angebot 3 -->
+                <div class="angebot-item">
+                    <h3>Pflanzenverkauf</h3>
+                    <p>Nehmen Sie ein Stück Natur mit nach Hause. Bei unseren regelmäßigen Aktionstagen verkaufen wir
+                        Ableger, heimische Wildkräuter und exotische Gewächse direkt vor Ort.</p>
+                    <a href="contact.html?anfrage=info" class="btn-aktion">Zum Shop</a>
+                </div>
+
             </div>
-
-            <!-- Angebot 3 -->
-            <div class="angebot-item">
-                <h3>Pflanzenverkauf</h3>
-                <p>Nehmen Sie ein Stück Natur mit nach Hause. Bei unseren regelmäßigen Aktionstagen verkaufen wir
-                    Ableger, heimische Wildkräuter und exotische Gewächse direkt vor Ort.</p>
-                <a href="contact.html?anfrage=info" class="btn-aktion">Zum Shop</a>
-            </div>
-
-        </div>
+        </section>
     </main>
 
     <!-- 3. FUSSBREICH -->

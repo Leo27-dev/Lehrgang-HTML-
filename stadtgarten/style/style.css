@@ -1,12 +1,27 @@
+:root {
+    --color-background-body: #F9FBF7;
+    --color-text-main: #2C3E50;
+    --color-text-muted: #1E4A2A;
+    --color-text-light: #FFFFFF;
+
+    --color-primary: #2E6F40;
+    --color-secondary: #E67E22;
+    --color-secondary-hover: #D35400;
+
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #E8F4EC;
+    --color-border: #D5DBDB;
+    --color-footer-bg: #2C3E50;
+}
+
 * {
     box-sizing: border-box;
-    /* [Kapitel 25: CSS Box-Modell] */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F9FBF7;
-    color: #2C3E50;
+    background-color: var(--color-background-body);
+    color: var(--color-text-main);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -14,22 +29,34 @@ body {
 
 /* --- Header & Navigation [Kapitel 24, 32-41: Flexbox] --- */
 header {
-    background-color: #FFFFFF;
-    border-bottom: 3px solid #2E6F40;
+    background-color: var(--color-surface);
+    border-bottom: 3px solid var(--color-primary);
     padding: 20px;
-    /* [Kapitel 19: Abstände / 31: Padding] */
 }
 
-header h1,
+.header-brand-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.logo-brand-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-brand-block h1 {
+    margin: 0;
+    text-align: left;
+    color: var(--color-primary);
+}
+
 header p {
     text-align: center;
-    /* [Kapitel 20: Zentrieren] */
-    color: #2E6F40;
-    margin: 0 0 10px 0;
-}
-
-header p {
-    color: #2C3E50;
+    color: var(--color-text-main);
     font-style: italic;
     margin-bottom: 20px;
 }
@@ -38,39 +65,57 @@ header p {
 header nav {
     display: flex;
     flex-direction: row;
-    /* [Kapitel 32: flex-direction] */
     flex-wrap: wrap;
-    /* [Kapitel 33: flex-wrap] */
     justify-content: center;
-    /* [Kapitel 39: align-justify-content] */
     gap: 20px;
-    /* Moderner Abstand zwischen Flex-Items */
     padding: 10px 0;
 }
 
 header a {
-    color: #2C3E50;
+    color: var(--color-text-main);
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
 }
 
 header a:hover {
-    color: #2E6F40;
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
-/* --- Hauptbereich & Layout [Kapitel 20 & 30: Responsive] --- */
+header a[aria-current="page"] {
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+}
+
+/* --- Styling für das Stadtgarten SVG-Logo --- */
+.logo-container {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    /* Verhindert Stauchung durch Flexbox */
+    transition: transform 0.3s ease;
+}
+
+/* Verhindert Verzerrungen des SVGs im Container */
+.logo-container svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Hauptbereich & Layout  --- */
 main {
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
-    /* [Kapitel 20: Zentrieren über Margin Auto] */
     padding: 10px;
 }
 
 main a {
-    color: #2E6F40;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: bold;
 }
@@ -79,15 +124,14 @@ main a:hover {
     text-decoration: underline;
 }
 
-/* --- Hero-Bereich [Kapitel 21: Hintergrundbilder] --- */
+/* --- Hero-Bereich  Hintergrundbilder --- */
 .hero-bereich {
-    background-color: #2E6F40;
-    /* Nutzt das übermittelte Garten-Bild als Hintergrund */
+    background-color: var(--color-primary);
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image_jBF77z.png');
     background-size: cover;
     /* [Kapitel 21a: Hintergrundbilder] */
     background-position: center;
-    color: #FFFFFF;
+    color: var(--color-text-light);
     text-align: center;
     padding: 60px 20px;
     /* Viel Platz durch Padding */
@@ -106,10 +150,10 @@ main a:hover {
 
 /* --- Info-Boxen & Angebote [Kapitel 35-38: Flexbox Grid] --- */
 .hinweis-box {
-    background-color: #E8F4EC;
-    border-left: 5px solid #2E6F40;
+    background-color: var(--color-surface-alt);
+    border-left: 5px solid var(--color-primary);
     /* [Kapitel 25: Box-Modell / Border] */
-    color: #1E4A2A;
+    color: var(--color-text-muted);
     padding: 15px;
     margin: 25px 0;
 }
@@ -124,30 +168,31 @@ main a:hover {
     margin-bottom: 30px;
 }
 
-/* Die einzelnen Angebotskarten nebeneinander */
+/* Die einzelnen Angebotskarten nebeneinander mit dunkelgrünem Hintergrund */
 .angebot-item {
-    background-color: #FFFFFF;
-    border: 1px solid #D5DBDB;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-border);
     padding: 20px;
     flex: 1 1 calc(33.333% - 20px);
     /* [Kapitel 37: flex-grow/-shrink/-basis] */
     min-width: 280px;
-    /* Verhindert, dass es auf Handys zu quetscht aussieht */
+    /* Verhindert, dass es auf Handys zu gequetscht aussieht */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--color-text-light);
 }
 
 .angebot-item h3 {
-    color: #2E6F40;
+    color: var(--color-text-light);
     margin-top: 0;
 }
 
 /* --- Buttons & Interaktionen --- */
 .btn-aktion {
     display: inline-block;
-    background-color: #E67E22;
-    color: #FFFFFF;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
     text-decoration: none;
     padding: 12px 24px;
     font-weight: bold;
@@ -157,38 +202,41 @@ main a:hover {
 }
 
 .btn-aktion:hover {
-    background-color: #D35400;
+    background-color: var(--color-secondary-hover);
     text-decoration: none;
 }
 
-/* --- Tabellen [Kapitel 12 & 21: Tabellen-CSS] --- */
+/* --- Tabellen  --- */
 .termine-tabelle {
     width: 100%;
     border-collapse: collapse;
-    /* Wichtig für saubere Linien */
     margin: 30px 0;
 }
 
 .termine-tabelle th {
-    background-color: #2E6F40;
-    color: #FFFFFF;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
     text-align: left;
     padding: 12px;
 }
 
 .termine-tabelle td {
     padding: 12px;
-    border-bottom: 1px solid #D5DBDB;
+    border-bottom: 1px solid var(--color-border);
 }
 
-/* --- Formulare [Kapitel 13: Formulare & 20: Zentrieren] --- */
+caption {
+    margin-bottom: 1rem;
+}
+
+/* --- Formulare --- */
 .kontakt-formular {
-    background-color: #FFFFFF;
-    border: 1px solid #D5DBDB;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     padding: 30px;
     max-width: 500px;
     margin: 40px auto;
-    /* [Kapitel 20: Zentriert das gesamte Formular] */
+    /* Zentriert das gesamte Formular */
 }
 
 .form-gruppe {
@@ -205,7 +253,7 @@ main a:hover {
 .form-gruppe textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #D5DBDB;
+    border: 1px solid var(--color-border);
     font-family: inherit;
 }
 
@@ -214,7 +262,7 @@ main a:hover {
     cursor: pointer;
 }
 
-/* --- Medien- & Definitionslisten [Kapitel 07 & 08] --- */
+/* --- Medien- & Definitionslisten  --- */
 img,
 table {
     max-width: 100%;
@@ -235,29 +283,106 @@ dl dd {
 
 /* --- Footer --- */
 footer {
-    background-color: #2C3E50;
-    color: #FFFFFF;
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-light);
     text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
 }
 
 footer a {
-    color: #FFFFFF;
+    color: var(--color-text-light);
     text-decoration: none;
     font-weight: bold;
 }
 
 footer a:hover {
-    color: #E67E22;
+    color: var(--color-secondary);
     text-decoration: underline;
 }
 
-header a[aria-current="page"] {
-    color: #2E6F40;
-    border-bottom: 2px solid #2E6F40;
+/* --- TABLET-ANSICHT (Breite kleiner als 768px) --- */
+@media (max-width: 768px) {
+    .hero-bereich {
+        padding: 40px 15px;
+    }
+
+    .hero-bereich h2 {
+        font-size: 26px;
+    }
+
+    .angebot-item {
+        flex: 1 1 calc(50% - 20px);
+    }
 }
 
-caption {
-    margin-bottom: 1rem;
+/* --- SMARTPHONE-ANSICHT (Breite kleiner als 576px) --- */
+@media (max-width: 576px) {
+    .logo-brand-block {
+        flex-direction: column;
+        /* Stapelt Logo und Titel untereinander */
+        gap: 8px;
+    }
+
+    .logo-brand-block h1 {
+        text-align: center;
+    }
+
+    .logo-container {
+        width: 55px;
+        height: 55px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .hero-bereich h2 {
+        font-size: 22px;
+    }
+
+    .hero-bereich p {
+        font-size: 16px;
+    }
+
+    .angebot-item {
+        flex: 1 1 100%;
+    }
+
+    .kontakt-formular {
+        padding: 20px;
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    dl dt {
+        float: none;
+        clear: none;
+        width: auto;
+        margin-bottom: 2px;
+    }
+
+    dl dd {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .termine-tabelle {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }

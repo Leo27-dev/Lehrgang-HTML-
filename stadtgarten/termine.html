@@ -14,7 +14,36 @@
 
     <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <h1>Stadtgarten Freiburg</h1>
+        <div class="header-brand-wrapper">
+            <!-- Dieser Block koppelt das Logo und das H1-Element eng aneinander -->
+            <div class="logo-brand-block">
+                <div class="logo-container">
+                    <svg xmlns="http://w3.org" viewBox="0 0 400 400" width="100%" height="100%">
+                        <defs>
+                            <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#4A5D4E" />
+                                <stop offset="100%" stop-color="#2C382F" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="200" cy="200" r="160" fill="none" stroke="#8FBC8F" stroke-width="4"
+                            stroke-dasharray="10 6" opacity="0.6" />
+                        <path d="M188 240 L212 240 L208 170 L192 170 Z" fill="url(#trunkGrad)" rx="2" />
+                        <circle cx="200" cy="140" r="65" fill="#2E8B57" />
+                        <circle cx="165" cy="155" r="45" fill="#3CB371" />
+                        <circle cx="235" cy="155" r="45" fill="#3CB371" />
+                        <circle cx="200" cy="110" r="40" fill="#66CDAA" />
+                        <circle cx="150" cy="245" r="6" fill="#FFB6C1" />
+                        <circle cx="150" cy="245" r="2.5" fill="#FFFACD" />
+                        <circle cx="250" cy="245" r="6" fill="#FFB6C1" />
+                        <circle cx="250" cy="245" r="2.5" fill="#FFFACD" />
+                        <path d="M 130 250 Q 200 240 270 250" fill="none" stroke="#2C382F" stroke-width="5"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h1>Stadtgarten Freiburg</h1>
+            </div>
+        </div>
+
         <p>Erleben, Lernen und Entspannen im Grünen</p>
 
         <nav aria-label="Hauptnavigation">
@@ -29,7 +58,7 @@
     <main>
         <h1 id="main-heading">Unsere zusätzlichen Angebote</h1>
         <p>Der Stadtgarten ist mehr als nur ein Park. Entdecke unsere vielfältigen Mitmach-Angebote, Workshops und
-            Events für Groß und Klein. Hier ist für jeden Naturliebhaber etwas dabei!</p>
+            Events für Groß und Klein. Here ist für jeden Naturliebhaber etwas dabei!</p>
 
         <table class="termine-tabelle">
             <caption>Übersicht unserer zusätzlichen Freizeit- und Mitmach-Angebote</caption>
@@ -43,23 +72,22 @@
             <tbody>
                 <!-- Angebot 1: Hochbeete -->
                 <tr>
-                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Garten-Patenschaften</th>
+                    <th scope="row">Garten-Patenschaften</th>
                     <td>
                         <figure style="margin: 0;">
                             <img src="images/hochbeet.webp" alt="Gepflegte Hochbeete in einer Gartenanlage"
                                 style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
                         </figure>
                     </td>
-                    <td>Übernimm die Patenschaft für dein eigenes Hochbeet! Perfekt für Familien, WGs oder
+                    <td>Übernimm die Patenschaft für dein eigenes Hochbeet! Perfekt für Familien, WGs or
                         Einzelpersonen ohne eigenen Garten. Wir stellen die Erde und das Basis-Saatgut, du erntest dein
-                        eigenes
-                        Bio-Gemüse.
+                        eigenes Bio-Gemüse.
                     </td>
                 </tr>
 
-                <!-- Angebot 2: Workshops (Neu besetzt mit Bild) -->
+                <!-- Angebot 2: Workshops -->
                 <tr>
-                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Workshops &amp; Kurse</th>
+                    <th scope="row">Workshops &amp; Kurse</th>
                     <td>
                         <figure style="margin: 0;">
                             <img src="images/pflanzentisch.jpg" alt="Gartenwerkzeuge und Töpfe auf einem Holztisch"
@@ -67,17 +95,17 @@
                         </figure>
                     </td>
                     <td>Lerne von unseren Profis. In regelmäßigen Seminaren erfährst du alles über nachhaltige
-                        Kompostierung,
-                        den richtigen Obstbaumschnitt im Frühjahr oder die Kunst des Haltbarmachens durch Fermentierung.
+                        Kompostierung, den richtigen Obstbaumschnitt im Frühjahr oder die Kunst des Haltbarmachens durch
+                        Fermentierung.
                     </td>
                 </tr>
 
-                <!-- Angebot 3: Pflanzentausch (Neu besetzt mit Bild) -->
+                <!-- Angebot 3: Pflanzentausch -->
                 <tr>
-                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Saatgut- &amp; Pflanzentausch</th>
+                    <th scope="row">Saatgut- &amp; Pflanzentausch</th>
                     <td>
                         <figure style="margin: 0;">
-                            <img src="images/setzlinge.jpg" Kleine grüne Pflanzensetzlinge in einer Reihe"
+                            <img src="images/setzlinge.jpg" alt="Kleine grüne Pflanzensetzlinge in einer Reihe"
                                 style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
                         </figure>
                     </td>
@@ -89,17 +117,16 @@
 
                 <!-- Angebot 4: Yoga -->
                 <tr>
-                    <th scope="row" style="font-weight: bold; color: #2E6F40;">Garten-Yoga</th>
+                    <th scope="row">Garten-Yoga</th>
                     <td>
                         <figure style="margin: 0;">
-                            <img src="images/yoga_park.jpg" Person praktiziert Yoga im Freien auf einer Wiese"
+                            <img src="images/yoga_park.jpg" alt="Person praktiziert Yoga im Freien auf einer Wiese"
                                 style="width: 150px; height: 100px; object-fit: cover; border: 1px solid #D5DBDB;">
                         </figure>
                     </td>
                     <td>Finde deine innere Ruhe inmitten blühender Beete. Unsere zertifizierten Trainer leiten dich
-                        durch
-                        entspannende Hatha-Yoga-Stunden an der frischen Luft. Perfekt, um dem stressigen Stadtalltag zu
-                        entfliehen.
+                        durch entspannende Hatha-Yoga-Stunden an der frischen Luft. Perfekt, um dem stressigen
+                        Stadtalltag zu entfliehen.
                     </td>
                 </tr>
             </tbody>

@@ -13,13 +13,47 @@
 <body>
 
     <!-- 1. KOPFBEREICH & NAVIGATION -->
+    <!-- 1. KOPFBEREICH & NAVIGATION -->
     <header>
-        <h1>Stadtgarten Freiburg</h1>
+        <div class="header-brand-wrapper">
+            <!-- Dieser neue Block hält Logo und H1 fest zusammen -->
+            <div class="logo-brand-block">
+                <div class="logo-container">
+                    <svg xmlns="http://w3.org" viewBox="0 0 400 400" width="100%" height="100%">
+                        <!-- ... (Dein restlicher SVG-Inhalt bleibt hier unverändert) ... -->
+                        <defs>
+                            <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#4A5D4E" />
+                                <stop offset="100%" stop-color="#2C382F" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="200" cy="200" r="160" fill="none" stroke="#8FBC8F" stroke-width="4"
+                            stroke-dasharray="10 6" opacity="0.6" />
+                        <path d="M188 240 L212 240 L208 170 L192 170 Z" fill="url(#trunkGrad)" rx="2" />
+                        <circle cx="200" cy="140" r="65" fill="#2E8B57" />
+                        <circle cx="165" cy="155" r="45" fill="#3CB371" />
+                        <circle cx="235" cy="155" r="45" fill="#3CB371" />
+                        <circle cx="200" cy="110" r="40" fill="#66CDAA" />
+                        <circle cx="150" cy="245" r="6" fill="#FFB6C1" />
+                        <circle cx="150" cy="245" r="2.5" fill="#FFFACD" />
+                        <circle cx="250" cy="245" r="6" fill="#FFB6C1" />
+                        <circle cx="250" cy="245" r="2.5" fill="#FFFACD" />
+                        <path d="M 130 250 Q 200 240 270 250" fill="none" stroke="#2C382F" stroke-width="5"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h1>Stadtgarten Freiburg</h1>
+            </div>
+        </div>
+
+
+
+
         <p>Erleben, Lernen und Entspannen im Grünen</p>
 
         <nav aria-label="Hauptnavigation">
-            <!-- Die Links nutzen direkt die Flexbox-Struktur deines CSS -->
-            <a href="./index.html">Zurück zur Homepage</a>
+            <!-- Linkbezeichnung auf "Startseite" für ein einheitliches Menü korrigiert -->
+            <a href="index.html">Startseite</a>
             <a href="angebote.html">Unsere Angebote</a>
             <a href="termine.html">Veranstaltungen &amp; Termine</a>
             <a href="contact.html" aria-current="page">Kontakt</a>
@@ -76,6 +110,7 @@
                             <option value="mAntrag">Mitglied-Antrag</option>
                             <option value="spenden">Spenden</option>
                             <option value="info">Informationen</option>
+                            <option value="Workshops">Workshops (bitte gewählten in Textfeld eintagen)</option>
                         </select>
                     </div>
 
