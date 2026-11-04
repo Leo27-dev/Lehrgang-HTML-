@@ -1,0 +1,33 @@
+.container {
+  width: 60rem;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 1em;
+}
+
+.box {
+  display: grid;
+
+  grid-row: span 2;
+}
+
+.box-header {
+  padding: 0 1.5em;
+  background: #257989;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-content {
+  background: white;
+  margin: 0;
+  padding: 2em;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid */

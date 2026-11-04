@@ -1,0 +1,15 @@
+/* Hier kommt Grid */
+.grid-container {
+  width: 90%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto;
+
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+}
+
+.span {
+  grid-column: auto / span 2;
+}

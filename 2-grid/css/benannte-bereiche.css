@@ -1,0 +1,29 @@
+.item1 {
+  background-color: #0b3844;
+  color: #fff;
+}
+
+.item2 {
+  background-color: #62c3c0;
+}
+
+.item3 {
+  background-color: #ddd9da;
+}
+
+.item4 {
+  background-color: #db5413;
+}
+
+/* ? === Grid === */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(8em, auto);
+  gap: 10px;
+
+  /* * Bereiche positionieren */
+  
+}
+
+/* * Items benennen */

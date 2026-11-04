@@ -1,0 +1,10 @@
+/* Hier kommt Grid */
+.grid-container {
+  width: 90%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  
+}
+

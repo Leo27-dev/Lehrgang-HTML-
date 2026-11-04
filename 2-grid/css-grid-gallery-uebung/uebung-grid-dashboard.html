@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Übung: CSS Grid Dashboard-Kacheln</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f3f5f7;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(1100px, 92%);
+      margin: 40px auto;
+    }
+
+    code {
+      padding: 0.1em 0.35em;
+      background: #e9eef4;
+      border-radius: 4px;
+    }
+
+    .task-box {
+      margin-bottom: 2rem;
+      padding: 1rem 1.25rem;
+      background: white;
+      border-left: 6px solid #6574cd;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.06);
+    }
+
+    .task-box li + li {
+      margin-top: 0.4rem;
+    }
+
+    .dashboard {
+      /*
+        TODO 1:
+        Erstelle ein Grid für ein Dashboard mit 6 gleich breiten Spalten.
+
+        TODO 2:
+        Die Anzahl der Zeilen ist nicht bekannt.
+        Lege deshalb die Höhe automatisch entstehender Zeilen auf 100px fest.
+
+        TODO 3:
+        Aktiviere eine dichte Packung, damit kleinere Kacheln Lücken schließen können.
+
+        TODO 4:
+        Ergänze einen Abstand zwischen den Kacheln.
+      */
+      
+    }
+
+    .widget {
+      min-height: 70px;
+      padding: 1rem;
+      background: white;
+      border: 1px solid #d8dee8;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.06);
+    }
+
+    .widget h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .widget p {
+      margin: 0;
+      color: #555;
+    }
+
+    .widget strong {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .widget--hero {
+      /*
+        TODO 5:
+        Diese Hauptkachel soll deutlich größer werden:
+        3 Spalten breit und 2 Zeilen hoch.
+      */
+      
+    }
+
+    .widget--wide {
+      /*
+        TODO 6:
+        Diese Kacheln sollen 2 Spalten breit werden.
+      */
+      
+    }
+
+    .widget--tall {
+      /*
+        TODO 7:
+        Diese Kacheln sollen 2 Zeilen hoch werden.
+      */
+      
+    }
+
+    .widget--small {
+      /*
+        Diese Klasse braucht keine Grid-Regel.
+        Sie ist nur zur besseren Lesbarkeit im HTML vorhanden.
+      */
+      
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Übung: Dashboard mit dynamischen Grid-Kacheln</h1>
+
+    <section class="task-box">
+      <h2>Arbeitsauftrag</h2>
+      <p>
+        Erstelle ein Dashboard aus unterschiedlich großen Kacheln. Nutze dabei die gleiche Technik
+        wie im Galerie-Beispiel: automatische Zeilen, feste Höhe pro Auto-Zeile und Elemente, die
+        mehrere Spalten oder Zeilen überspannen.
+      </p>
+      <ol>
+        <li>Lege für <code>.dashboard</code> ein Grid mit 6 gleich breiten Spalten an.</li>
+        <li>Gib automatisch erzeugten Zeilen eine Höhe von 70px.</li>
+        <li>Aktiviere eine dichte Packung mit <code>grid-auto-flow: dense;</code>.</li>
+        <li>Lasse die Hauptkachel 3 Spalten und 2 Zeilen einnehmen.</li>
+        <li>Lasse breite Kacheln 2 Spalten einnehmen.</li>
+        <li>Lasse hohe Kacheln 2 Zeilen einnehmen.</li>
+      </ol>
+      <p>
+        Ziel: ein übersichtliches Kachel-Dashboard.
+      </p>
+    </section>
+
+    <section class="dashboard" aria-label="Projekt-Dashboard">
+      <article class="widget widget--hero">
+        <h2>Aktueller Projektstand</h2>
+        <p>Zusammenfassung der wichtigsten Kennzahlen</p>
+        <strong>72%</strong>
+      </article>
+
+      <article class="widget widget--small">
+        <h2>Offene Aufgaben</h2>
+        <strong>14</strong>
+      </article>
+
+      <article class="widget widget--small">
+        <h2>Feedbacks</h2>
+        <strong>6</strong>
+      </article>
+
+      <article class="widget widget--wide">
+        <h2>Nächster Meilenstein</h2>
+        <p>Layout-Abnahme vorbereiten</p>
+      </article>
+
+      <article class="widget widget--tall">
+        <h2>Notizen</h2>
+        <p>Hier ist mehr vertikaler Platz nötig, weil diese Kachel längeren Text aufnehmen soll.</p>
+      </article>
+
+      <article class="widget widget--small">
+        <h2>Tickets</h2>
+        <strong>9</strong>
+      </article>
+
+      <article class="widget widget--wide">
+        <h2>Heute wichtig</h2>
+        <p>Menüstruktur, Bildgrößen und mobile Darstellung prüfen.</p>
+      </article>
+
+      <article class="widget widget--small">
+        <h2>Uploads</h2>
+        <strong>23</strong>
+      </article>
+
+      <article class="widget widget--tall">
+        <h2>Checkliste</h2>
+        <p>Farben prüfen, Texte kürzen, Abstände angleichen, Footer testen.</p>
+      </article>
+
+      <article class="widget widget--small">
+        <h2>Version</h2>
+        <strong>1.4</strong>
+      </article>
+
+      <article class="widget widget--wide">
+        <h2>Letzte Änderung</h2>
+        <p>Startseite wurde überarbeitet.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

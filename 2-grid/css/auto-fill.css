@@ -1,0 +1,19 @@
+/* Hier kommt Grid */
+.grid-container {
+  width: 90%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto;
+
+  /* 
+    * fill = auffüllen *
+    Fülle den Container mit möglichst vielen Spalten.
+    Ob später genug Inhalte da sind, interessiert zunächst nicht.
+
+    ? Merksatz
+    ?   fill denkt an die Spalten.
+  */
+  
+}

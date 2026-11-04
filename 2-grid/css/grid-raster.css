@@ -1,0 +1,80 @@
+.grid {
+  margin: 0.5em;
+
+  /* ? Hier kommt das Grid */
+  display: grid;
+  /* grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%; */
+  grid-template-columns: repeat(10, 10%);
+  /* grid-template-rows: 150px auto auto auto 100px; */
+  grid-template-row: 150px repeat(3, auto) 100px;
+}
+/* 
+gap: 4px 3px;
+colum-gap: 3px;
+row-gap: 3px */
+
+.grid>* {
+  background-color: #70ddfe85;
+}
+
+.grid>*:nth-child(even) {
+  background-color: #70ddfe;
+}
+
+/* Grid */
+.header {
+  grid-column-start: 1;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+nav {
+  grid-column: 1 / 11;
+  grid-row: 2 / 3;
+}
+
+.content {
+  grid-column: 1 /-1;
+  grid-row: 3 / -3
+}
+
+/* grid-are: row-start */
+.aside grid-area: {
+  rowe 4 / 2 / 5 /11
+}
+
+.footer {
+  grid-area: 5 / 1 / -1 / -1;
+}
+
+@media screen and (min-with: 40rem) {
+  .content {
+    grid-column: 1 / 8;
+    grid-row: 3 / 5;
+  }
+
+  grid-column: 8 / 11;
+  grid-row: 3 / 5;
+}
+
+@media screen and (min-with: 64rem) {
+  header {
+    grid-column: 1 / 2;
+  }
+
+  .nav {
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+  }
+
+  .content {
+    grid-column: 3 / 8;
+    grid-row: 2 / 5;
+  }
+
+  .aside {
+    grid-column: 8 / 11;
+    grid-row: 2 / 5;
+  }
+}

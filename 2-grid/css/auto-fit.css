@@ -1,0 +1,20 @@
+/* Hier kommt Grid */
+.grid-container {
+  width: 90%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto;
+
+  /* 
+    * fit = passend machen / anpassen *
+    Passe die Spalten an die vorhandenen Inhalte an.
+    Grid erzeugt zunächst ebenfalls alle möglichen Spalten, prüft dann aber:
+    „Moment, die letzte Spalte wird gar nicht benötigt.“ und setzt ihre Breite auf 0.
+
+    ? Merksatz:    
+    ?  fit denkt an die Inhalte.
+  */
+  
+}
