@@ -16,5 +16,5 @@
     ? Merksatz:    
     ?  fit denkt an die Inhalte.
   */
-  
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
