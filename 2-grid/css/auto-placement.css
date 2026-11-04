@@ -5,6 +5,20 @@
   margin: 0 auto;
   display: grid;
   gap: 20px;
-  
+  /* Standard-wert: Browser erzeugt soviele Reihen wie nötig */
+  grid-template-rows: auto;
+  /* fr -> fractions */
+  grid-template-columns: 1fr;
 }
 
+@media screen and (min-with:40rem) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-with:60rem) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
