@@ -1,11 +1,79 @@
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://gstatic.com) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://gstatic.com) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://gstatic.com) format('truetype');
+}
+
+/* ? === Variablen === */
+/* Standard: Light Theme */
+:root {
+    --color-text: #292d33;
+    --color-background: #f5f6f8;
+    --color-heading: #273c55;
+    --color-link: #315e91;
+    --color-btn-background: #315e91;
+    --color-btn-background-hover: #273c55;
+    --color-btn-border: #315e91;
+    --color-link-hover: #a14b39;
+    --color-panel: #fff;
+    --color-border: #c7d0db;
+    --color-header: #e6eaf0;
+    --color-hero: #dfe7ef;
+    --color-footer: #273c55;
+    --color-focus: #b66a43;
+    --color-table-background: #fffaf5;
+    --color-table-heading: #efe4d6;
+    --color-table-border: #d8c2ad;
+}
+
+/* Aktiviert das Dark Theme, wenn <html data-theme="dark"> gesetzt ist */
+:root[data-theme="dark"] {
+    --color-text: #e6eaf0;
+    --color-background: #182431;
+    --color-heading: #c0d9f2;
+    --color-link: #9bc5ed;
+    --color-btn-background: #426c94;
+    --color-btn-background-hover: #5683ad;
+    --color-btn-border: #9bc5ed;
+    --color-link-hover: #f0b08e;
+    --color-panel: #24394c;
+    --color-border: #526c82;
+    --color-header: #223649;
+    --color-hero: #263e52;
+    --color-footer: #142230;
+    --color-focus: #efb587;
+    --color-table-background: #24394c;
+    --color-table-heading: #34506a;
+    --color-table-border: #60788d;
+}
+
 /* ? === Basics === */
-/* Universal-Selektor*/
 * {
     box-sizing: border-box;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
-
 
 html {
     font-size: 16px;
@@ -14,8 +82,8 @@ html {
 body {
     font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #292d33;
-    background-color: #f5f6f8;
+    color: var(--color-text);
+    background-color: var(--color-background);
     margin: 0;
 }
 
@@ -23,8 +91,7 @@ body {
 h1,
 h2,
 h3 {
-    color: #273c55;
-
+    color: var(--color-heading);
 }
 
 h1 {
@@ -36,35 +103,34 @@ h1 {
 h2 {
     font-size: 1.6rem;
     line-height: 1.3;
-
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
-p {}
+p {
+    max-width: 72ch;
+}
 
 a {
-    color: #315e91;
+    color: var(--color-link);
     text-decoration: none;
 }
 
 a:hover {
-    color: #a14b39;
+    color: var(--color-link-hover);
     text-decoration: underline;
-
 }
 
 a:focus-visible,
-b:focus-visible,
+button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #b66a43;
+    outline: 3px solid var(--color-focus);
     outline-offset: 3px;
 }
-
 
 /* ? === Layout === */
 .container {
@@ -77,9 +143,9 @@ button,
 .button {
     display: inline-block;
     padding: 9px 17px;
-    color: white;
-    background-color: #315e91;
-    border: 1px solid #315e91;
+    color: var(--color-panel);
+    background-color: var(--color-btn-background);
+    border: 1px solid var(--color-btn-border);
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
@@ -87,33 +153,65 @@ button,
 
 button:hover,
 .button:hover {
-    color: white;
-    background-color: #273c55;
+    color: var(--color-panel);
+    background-color: var(--color-btn-background-hover);
     text-decoration: none;
+}
+
+.theme-toggle {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.45rem 0.8rem;
+    background: transparent;
+    color: var(--color-heading);
+    border: 2px solid var(--color-link);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: var(--color-hero);
+    color: var(--color-heading);
 }
 
 figure {
     margin: 15px 0;
 }
 
-/* ? === Header === */
-.site-header {
-    background-color: #e6eaf0;
-    border-bottom: 3px solid #315e91;
-    padding: 18px 24px;
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 20em), 1fr);
+    gap: 1rem;
+    grid-auto-flow: dense;
 }
 
-.logo svg {
-    width: 190px;
-    height: 55px;
-    fill: #273c55;
-    stroke: #315e91;
+.card-grid .card {
+    flex: 1 1 15rem;
+    background-color: var(--color-panel);
+    border: 1px solid var(--color-border);
+    min-width: 0;
+}
+
+/* ? === Header === */
+.site-header {
+    background-color: var(--color-header);
+    border-bottom: 3px solid var(--color-link);
+    padding: 18px 24px;
 }
 
 .logo {
     position: relative;
     top: 0;
 }
+
+.logo svg {
+    width: 190px;
+    height: 55px;
+    fill: var(--color-heading);
+    stroke: var(--color-link);
+}
+
 
 /* ? === Navigation === */
 .site-nav ul {
@@ -124,11 +222,10 @@ figure {
     gap: 0.6rem 1.4rem;
 }
 
-
 .site-nav a {
     text-decoration: none;
     font-weight: bold;
-    padding: 0.3rem 0.1rem;
+    padding: 0.3em 0.1em;
 }
 
 .site-nav a:hover,
@@ -138,35 +235,22 @@ figure {
 
 /* ? === Hero === */
 .hero {
-    background-color: #dfe7ef;
+    background-color: var(--color-hero);
     padding: 36px 0;
 }
 
 .hero-content,
-.two-colums {
+.two-columns {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.5em;
     align-items: center;
 }
 
 .hero-text,
 .hero-image,
-.two-colums>* {
+.two-columns>* {
     flex: 1 1 19rem;
-}
-
-/* Cards */
-
-.card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.card-grid,
-.card {
-    flex: 1 15rem;
 }
 
 /* ? === Bilder === */
@@ -179,7 +263,7 @@ img {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #fffaf5;
+    background-color: var(--color-table-background);
 }
 
 caption {
@@ -187,23 +271,24 @@ caption {
     caption-side: top;
     font-weight: bold;
     margin-bottom: 16px;
+    color: var(--color-heading);
 }
 
 thead {
-    background-color: #efe4d6;
+    background-color: var(--color-table-heading);
 }
 
 th,
 td {
     padding: 15px;
-    border: 1px solid #d8c2ad;
+    border: 1px solid var(--color-table-border);
     text-align: left;
 }
 
 /* ? === Formular === */
 .contact-form {
-    background-color: #fffaf5;
-    border: 1px solid #d8c2ad;
+    background-color: var(--color-table-background);
+    border: 1px solid var(--color-table-border);
     border-radius: 12px;
     padding: 32px;
 }
@@ -216,6 +301,7 @@ label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
+    color: var(--color-text);
 }
 
 input,
@@ -224,36 +310,36 @@ textarea {
     width: 100%;
     padding: 12px;
     font: inherit;
-    color: #2f241c;
-    background-color: #f7f1ea;
-    border: 1px solid #d8c2ad;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-table-border);
     border-radius: 8px;
 }
 
 /* ? === Footer === */
 .site-footer {
-    background-color: #273c55;
-    color: white;
+    background-color: var(--color-footer);
+    color: var(--color-panel);
     padding: 25px 0;
 }
 
 .site-footer a,
 .site-footer h2 {
-    color: white;
+    color: var(--color-panel);
 }
 
-.site-grid {
+.footer-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1, 5rem;
+    gap: 1.5rem;
 }
 
 .footer-grid>div {
     flex: 1 1 12rem;
-
 }
 
-@media (max-with: 640px) {
+
+@media (max-width: 640px) {
     .site-header {
         padding: 12px 16px;
     }
@@ -262,7 +348,8 @@ textarea {
         gap: 0.3rem 0.9rem;
     }
 
-    .hero .page-header {
+    .hero,
+    .page-header {
         padding: 20px 0;
     }
 
@@ -270,8 +357,14 @@ textarea {
         font-size: 1.75rem;
     }
 
-    .hero-text .hero-image .hero-colums .two-colums .card-grid {
+    .hero-text,
+    .hero-image,
+    .two-columns>*,
+    .card-grid .card {
         flex-basis: 100%;
+    }
+
+    .container {
         padding: 0 16px;
     }
 }

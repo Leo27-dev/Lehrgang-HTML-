@@ -9,6 +9,8 @@
     name="description">
   <title>SoundWerk Studio | Startseite</title>
   <link href="css/styles.css" rel="stylesheet">
+  <!-- Das Skript mit defer wird hier sauber im Head verknüpft -->
+  <script src="js/theme-toggle.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <div class="container">
 
       <div class="logo">
-        <svg viewbox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
           <text font-family="Arial" font-size="32" x="0" y="50">
             SoundWerk
           </text>
@@ -37,6 +39,7 @@
           <li><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
+      <button aria-pressed="false" class="theme-toggle" type="button">Dunkelmodus</button>
     </div>
   </header>
 
@@ -64,55 +67,51 @@
 
     <section class="section">
       <div class="container">
-        <h2>Was wir anieten</h2>
+        <h2>Was wir anbieten</h2>
+
         <div class="card-grid">
-          <div class="card">
+
+          <article class="card">
             <h3>Proberaum</h3>
-            <p>ltest hhcoifdohsfhh</p>
-          </div>
-          <section class="section">
-            <div class="container">
-              <h2>Was wir anieten</h2>
-              <div class="card-grid">
-                <div class="card">
-                  <h3>Proberaum</h3>
-                  <p>ltest hhcoifdohsfhh</p>
-                </div>
-                <section class="section">
-                  <div class="container">
-                    <h2>Was wir anieten</h2>
-                    <div class="card-grid">
-                      <div class="card">
-                        <h3>Proberaum</h3>
-                        <p>ltest hhcoifdohsfhh</p>
-                      </div>
-                    </div>
+            <p>Modern ausgestattete Räume für Bands, Duos und Solomusiker</p>
+          </article>
 
+          <article class="card">
+            <h3>Proberaum</h3>
+            <p>Modern ausgestattete Räume für Bands, Duos und Solomusiker</p>
+          </article>
 
+          <article class="card">
+            <h3>Proberaum</h3>
+            <p>Modern ausgestattete Räume für Bands, Duos und Solomusiker</p>
+          </article>
 
-                  </div>
+        </div>
 
-                </section>
+      </div>
+    </section>
 
-                <section class="section section-alt">
-                  <div class="container two-culums">
-                    <h2>Warum SoundWerk?</h2>
-                    <p>
-                      Unser Studio verbindet Technik, Kreativität und eine entspannte
-                      Arbeitsatmosphäre. Bei uns kannst Du proben, aufnehmen und Ideen
-                      gemeinsam weiterentwickeln.
-                    </p>
-                    <ul class="check-list">
-                      <li>zentrale Lage</li>
-                      <li>faire Preise</li>
-                      <li>freundliche Betreuung</li>
-                      <li>geeignet für Einzelpersonen und Bands</li>
-                    </ul>
-                    <figure>
-                      <img alt="Proberaum mit Instrumenten" src="images/room.jpg">
-                    </figure>
-                  </div>
-                </section>
+    <section class="section section-alt">
+      <div class="container two-columns">
+        <div>
+          <h2>Warum SoundWerk?</h2>
+          <p>
+            Unser Studio verbindet Technik, Kreativität und eine entspannte
+            Arbeitsatmosphäre. Bei uns kannst Du proben, aufnehmen und Ideen
+            gemeinsam weiterentwickeln.
+          </p>
+          <ul class="check-list">
+            <li>zentrale Lage</li>
+            <li>faire Preise</li>
+            <li>freundliche Betreuung</li>
+            <li>geeignet für Einzelpersonen und Bands</li>
+          </ul>
+        </div>
+        <figure>
+          <img alt="Proberaum mit Instrumenten" src="images/room.jpg">
+        </figure>
+      </div>
+    </section>
 
   </main>
 
