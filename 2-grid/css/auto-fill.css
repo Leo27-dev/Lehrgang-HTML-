@@ -15,5 +15,5 @@
     ? Merksatz
     ?   fill denkt an die Spalten.
   */
-  
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 }
