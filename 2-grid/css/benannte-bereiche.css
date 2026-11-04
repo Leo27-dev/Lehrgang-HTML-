@@ -22,8 +22,41 @@
   grid-auto-rows: minmax(8em, auto);
   gap: 10px;
 
-  /* * Bereiche positionieren */
-  
+  /* *2 Bereiche positionieren */
+  grid-template-areas:
+    "header header"
+    "content content"
+    "sidebar footer";
+
+
 }
 
-/* * Items benennen */
+@media screen and (min-width: 40em) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "sidebar content content"
+      "sidebar content content"
+      "sidebar footer footer"
+    ;
+  }
+}
+
+
+/* * 1.Items benennen */
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: sidebar;
+}
+
+.item3 {
+  grid-area: content;
+}
+
+.item4 {
+  grid-area: footer;
+}
