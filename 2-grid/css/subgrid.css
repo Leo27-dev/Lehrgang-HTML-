@@ -9,7 +9,7 @@
 
 .box {
   display: grid;
-
+  grid-template-rows: subgrid;
   grid-row: span 2;
 }
 
@@ -29,5 +29,3 @@
   padding: 2em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
-
-/* Grid */
