@@ -2,4 +2,9 @@
   border: 1px solid gray;
 }
 
-/* === Rechnen === *//*# sourceMappingURL=06-rechnen.css.map */
+/* === Rechnen === */
+.example {
+  width: 7rem;
+  width: 3rem;
+  width: calc(10rem * 1rem);
+}/*# sourceMappingURL=06-rechnen.css.map */

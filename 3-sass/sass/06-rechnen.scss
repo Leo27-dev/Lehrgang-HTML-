@@ -1,5 +1,19 @@
+@use "sass:math"
+
+
+
+
+
 .container {
   border: 1px solid gray;
 }
 
 /* === Rechnen === */
+.example {
+  width: 2rem + 5rem;
+  width: 5rem - 2rem;
+  width: 2rem * 5 width: math.div(2re, 3);
+  width: calc(2em/3);
+  width: 100% - 10px;
+  width: 100% - 10px;
+}

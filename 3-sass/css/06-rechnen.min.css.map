@@ -1,1 +1,1 @@
-{"version":3,"sources":["..\\sass\\06-rechnen.scss"],"names":[],"mappings":"AAAA,WACE,qBAAA","file":"06-rechnen.min.css","sourcesContent":[".container {\r\n  border: 1px solid gray;\r\n}\r\n\r\n/* === Rechnen === */\r\n"]}
+{"version":3,"sources":["..\\sass\\06-rechnen.scss"],"names":[],"mappings":"AAAA,WACE,qBAAA,CAIF,SACE,UAAA,CACA,UAAA,CACA,sBAAA","file":"06-rechnen.min.css","sourcesContent":[".container {\r\n  border: 1px solid gray;\r\n}\r\n\r\n/* === Rechnen === */\r\n.example {\r\n  width: 2rem + 5rem;\r\n  width: 5rem - 2rem;\r\n  width: calc(2rem * 5rem);\r\n}"]}

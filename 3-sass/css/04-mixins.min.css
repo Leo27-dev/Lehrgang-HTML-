@@ -1,1 +1,1 @@
-.container{border:1px 1px gray}h1{border:1px 3px red}/*# sourceMappingURL=04-mixins.min.css.map */
+.container{border:1px 1px gray}@media screen and (min-with: 768px){.container{padding:1.5rem;width:740px}}@media screen and (min-with: 993px){.container{padding:1.5rem;width:993px}}h1{border:1px 3px red}.container{padding:1rem;width:350px}/*# sourceMappingURL=04-mixins.min.css.map */

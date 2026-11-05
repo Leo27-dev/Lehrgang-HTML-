@@ -8,3 +8,14 @@
 }
 
 /* === Verzweigungen === */
+$warnung: true;
+
+.example {
+  @if ($warnung ) {
+    background-color: orange;
+  }
+
+  @else {
+    background-color: blue;
+  }
+}
