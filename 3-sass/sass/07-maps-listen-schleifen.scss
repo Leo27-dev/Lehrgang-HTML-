@@ -1,0 +1,55 @@
+.container, .icon {
+  border: 1px solid gray;
+}
+
+.icon {
+  background-color: steelblue;
+  color: white;
+}
+
+/* === Listen === */
+
+
+// Maps mit Mixins
+
+
+/* === verschachtelte Maps === */
+
+
+// generiere custom properies
+:root {
+  @each $color-key, $color-values in $colors {
+    @each $tone-key, $tone-value in $color-values {
+
+      @if($tone-key ==normal) {
+        --#{$color-key}: #{$tone-value};
+      }
+
+      @else {
+        --#{$color-key}-#{$tone-key}: #{$tone-value};
+      }
+
+    }
+  }
+}
+
+// Klassen erstellen und custom-properties zuweisen
+@each $color-key, $color-values in $colors {
+  @each $tone-key, $tone-value in $color-values {
+
+    @if($tone-key ==normal) {
+      .bg-#{$color-key}-#{$tone-key} {
+        background-color: var(--#{$color-key});
+      }
+    }
+
+    @else {
+      .bg-#{$color-key}-#{$tone-key} {
+        background-color: var(--#{$color-key}-#{$tone-key});
+      }
+    }
+
+  }
+}
+
+/* === Schleifen mit @for === */

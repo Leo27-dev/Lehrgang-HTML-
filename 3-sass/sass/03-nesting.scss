@@ -1,0 +1,163 @@
+// ==========================================
+// 1. SCSS VARIABLEN & CONFIG
+// ==========================================
+$color-primary: #286090;
+$color-primary-dark: #204d74;
+$color-text: #333;
+$color-text-light: #555;
+$color-text-dark: #111;
+$color-bg-light: #eee;
+$color-bg-nav: #f8f8f8;
+$color-focus-shadow: #0275d8;
+
+$font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+$radius-default: 0.8rem;
+$breakpoint-mobile: 580px;
+
+// Liste für Interpolation der Pseudo-Klassen
+$states: hover, active, focus;
+
+
+// ==========================================
+// 2. GLOBALE STYLES
+// ==========================================
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  color: $color-text;
+  background-color: #fff;
+}
+
+header {
+  border-bottom: 1px solid $color-primary;
+}
+
+.container {
+  width: min(100% - 2rem, 62rem);
+  margin: auto;
+}
+
+
+// ==========================================
+// 3. NAVIGATION (Nesting)
+// ==========================================
+nav {
+  background-color: $color-bg-nav;
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: $color-text-light;
+    text-decoration: none;
+
+    // Interpolation kombiniert mit Nesting (&) für alle drei States
+    @each $state in $states {
+      &:#{$state} {
+        color: $color-text-dark;
+        background: transparent;
+      }
+    }
+
+    .aktuell {
+      background-color: $color-bg-light;
+    }
+  }
+}
+
+
+// ==========================================
+// 4. EINLEITUNG (Nesting & Media Queries)
+// ==========================================
+.einleitung {
+  padding: 3rem 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background-color: $color-bg-light;
+  border-radius: $radius-default;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary-dark;
+    border-radius: $radius-default;
+    display: inline-block;
+
+    &:hover,
+    &:active {
+      background-color: blue;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $color-focus-shadow;
+      padding: 1rem;
+      text-decoration: none;
+      outline: 0;
+    }
+  }
+
+  // Media Query direkt in das Element geschachtelt
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+}
+
+
+// ==========================================
+// 5. LAYOUT & FOOTER
+// ==========================================
+.zeile {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
+  }
+}
+
+article {
+  width: 48%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: auto;
+  }
+}
+
+main {
+  padding-bottom: 1rem;
+}
+
+footer {
+  color: #777;
+  border-top: 1px solid $color-primary;
+}
+
+.hinweis {
+  background: $color-bg-light;
+  padding: 1rem;
+}

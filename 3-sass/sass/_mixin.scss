@@ -1,0 +1,19 @@
+@mixin fb($dir: false, $wrap: false, $main-align: false, $cross-align: false) {
+  display: flex;
+
+  @if $dir {
+    flex-direction: $dir;
+  }
+
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+
+  @if $main-align {
+    justify-content: $main-align;
+  }
+
+  @if $cross-align {
+    align-items: $cross-align;
+  }
+}

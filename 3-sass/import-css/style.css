@@ -1,0 +1,9 @@
+@import "colors.css";
+@import "buttons.css";
+body {
+  background-color: var(--white);
+  color: var(--orange);
+  font-family: sans-serif;
+}
+
+/* Nachteil: es wird mehr Traffic erzeugt, da der Import keine Code-Schnipsel zusammenführt, sondern alle importierten Dateien geladen werden müssen, genau so als wären sie einzeln mit dem Link-Tag in die HTML-Datei eingebunden. */

@@ -1,0 +1,23 @@
+// ? STRG+# einzeiliger Kommentar, werden in CSS-Dateien nicht ausgegeben
+/* 
+mehrzeiliger Kommentar ALT + SHIFT + A
+ist auch in den .css-Dateien lesbar
+werden in den komprimierten Dateien (.min.css) ebenfalls nicht ausgegeben
+
+Variablen in Sass: $variablenbezeichner
+*/
+
+$colors: #333;
+$medium: 786px;
+$frontSize 20px;
+
+body {
+    color: $colors;
+}
+
+@media screen and (min-width: $medium) {
+    boddy {
+        font-size: $frontSize;
+    }
+
+}

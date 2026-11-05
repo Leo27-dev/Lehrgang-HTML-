@@ -1,0 +1,24 @@
+/**  
+ * * BEM - Block Element Modifier
+ *
+ * Folgender Code erzeugt die Regeln für 2 CSS-Klassen:
+ * .problem und .problem--serious
+ * (siehe button-beispiel.html Zeile 14 und 15).
+ *
+ * Wobei eine Klasse (.problem) die Grundformatierung enthält 
+ * und die Klassenerweiterung &--serious eine Änderung für die Rahmen-Einstellungen.
+ *
+ * Man benötigt hierbei i.d.R. nur die Grundklasse für die Grundformatierung.
+ * Möchte man Änderungen / Varianten nutzen,
+ * muss man ZUSÄTZLICH die .problem--serious-Klasse nutzen.
+ *
+ * In CSS erzeugt der Prozessor eine Klasse .problem mit der Grundformatierung 
+ * und eine Klasse .problem--serious mit den speziellen Einstellungen.
+ *
+ * In HTML muss für das Element mit der Grundformatierung nur die Klasse .problem 
+ * und für das Element mit der besonderen Formatierung die Klasse .problem 
+ * UND die Klasse .problem-serious verwendet werden.
+ */
+
+
+// ! Übung 4

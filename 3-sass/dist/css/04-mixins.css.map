@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\..\\sass\\04-mixins.scss","04-mixins.css"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF","file":"04-mixins.css","sourcesContent":[".container {\r\n  border: 1px solid gray;\r\n}",".container {\n  border: 1px solid gray;\n}"]}

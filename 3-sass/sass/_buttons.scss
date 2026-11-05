@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  background-color: var(--blue);
+  color: #333;
+  padding: 0.75rem 1.2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--pink);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
