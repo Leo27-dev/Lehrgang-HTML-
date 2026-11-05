@@ -2,7 +2,12 @@
 $breite-inhalt: 1040px;
 $abstand-karten: $abstand-karten;
 
-
+//bsp für wiederverwendbare Flex-anordnungen 
+@mixin flex-umbruch($abstand: $abstand-karten) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $abstand;
+}
 
 
 @font-face {
@@ -187,10 +192,7 @@ figure {
 
 /* Cards */
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100%, 20em), 1fr);
-    gap: $abstand-karten;
-    grid-auto-flow: dense;
+    @mixin flex-umbruch();
 }
 
 .card-grid .card {
@@ -336,9 +338,7 @@ textarea {
 }
 
 .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    @include flex-umbruch(1.5rem)
 }
 
 .footer-grid>div {
