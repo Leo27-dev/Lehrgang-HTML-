@@ -23,28 +23,30 @@ header {
 nav {
   background-color: #f8f8f8;
 }
-
 nav ul {
   margin: 0;
   padding-left: 0;
   display: flex;
   list-style: none;
 }
-
 nav a {
   display: block;
   padding: 0.6rem 1rem;
   color: #555;
   text-decoration: none;
 }
-
-nav a:hover,
-nav a:active,
+nav a:hover {
+  color: #111;
+  background: transparent;
+}
+nav a:active {
+  color: #111;
+  background: transparent;
+}
 nav a:focus {
   color: #111;
   background: transparent;
 }
-
 nav a .aktuell {
   background-color: #eee;
 }
@@ -65,13 +67,6 @@ nav a .aktuell {
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
-
-@media screen and (max-width: 580px) {
-  .einleitung {
-    padding: 1.5rem;
-    margin: 1rem 0;
-  }
-}
 .einleitung a {
   color: #fff;
   background-color: #286090;
@@ -79,38 +74,41 @@ nav a .aktuell {
   border-radius: 0.8rem;
   display: inline-block;
 }
-
-.einleitung a:hover,
-.einleitung a:active {
+.einleitung a:hover, .einleitung a:active {
   background-color: blue;
 }
-
 .einleitung a:focus {
   box-shadow: 0 0 0 2px #0275d8;
   padding: 1rem;
   text-decoration: none;
   outline: 0;
 }
+@media screen and (max-width: 580px) {
+  .einleitung {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+}
 
 .zeile {
   display: flex;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 580px) {
   .zeile {
     display: block;
   }
 }
+
 article {
   width: 48%;
 }
-
 @media screen and (max-width: 580px) {
   article {
     width: auto;
   }
 }
+
 main {
   padding-bottom: 1rem;
 }
@@ -123,6 +121,4 @@ footer {
 .hinweis {
   background: #eee;
   padding: 1rem;
-}
-
-/*# sourceMappingURL=03-nesting.css.map */
+}/*# sourceMappingURL=03-nesting.css.map */

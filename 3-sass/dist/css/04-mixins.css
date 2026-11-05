@@ -1,3 +1,7 @@
 .container {
-  border: 1px solid gray;
+  border: 1px 1px gray;
+}
+
+h1 {
+  border: 1px 3px red;
 }/*# sourceMappingURL=04-mixins.css.map */

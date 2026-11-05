@@ -1,3 +1,33 @@
+@mixin boder($staerke: 1px, $farbe: gray) {
+  border: 1px $staerke $farbe;
+}
+
+@mixin mq($size) {
+  @media screen and (min-with: $size) {
+    @content //platzhalter für flexibele inhalte 
+  }
+}
+
 .container {
-  border: 1px solid gray;
+  @include boder();
+
+  @include mq(768px) {
+    padding: 1.5rem;
+    width: 740px;
+  }
+
+  @include mq(993px) {
+    padding: 1.5rem;
+    width: 993px;
+
+  }
+}
+
+h1 {
+  @include boder(3px, red)
+}
+
+.container {
+  padding: 1rem;
+  width: 350px;
 }

@@ -1,1 +1,1 @@
-{"version":3,"sources":["..\\sass\\04-mixins.scss"],"names":[],"mappings":"AAAA,WACE,qBAAA","file":"04-mixins.min.css","sourcesContent":[".container {\r\n  border: 1px solid gray;\r\n}"]}
+{"version":3,"sources":["..\\sass\\04-mixins.scss"],"names":[],"mappings":"AAIA,WAHE,mBAAA,CAOF,GAPE,kBAAA","file":"04-mixins.min.css","sourcesContent":["@mixin boder($staerke, $farbe) {\r\n  border: 1px $staerke $farbe;\r\n}\r\n\r\n.container {\r\n  @include boder(1px, gray);\r\n}\r\n\r\nh1 {\r\n  @include boder(3px, red)\r\n}"]}
