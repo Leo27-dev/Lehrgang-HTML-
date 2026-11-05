@@ -1,0 +1,377 @@
+/* ? === Variablen === */
+$breite-inhalt: 1040px;
+$abstand-karten: $abstand-karten;
+
+
+
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://gstatic.com) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://gstatic.com) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    font-display: swap;
+    src: url(https://gstatic.com) format('truetype');
+}
+
+/* ? === custom properties === */
+/* Standard: Light Theme */
+:root {
+    --color-text: #292d33;
+    --color-background: #f5f6f8;
+    --color-heading: #273c55;
+    --color-link: #315e91;
+    --color-btn-background: #315e91;
+    --color-btn-background-hover: #273c55;
+    --color-btn-border: #315e91;
+    --color-link-hover: #a14b39;
+    --color-panel: #fff;
+    --color-border: #c7d0db;
+    --color-header: #e6eaf0;
+    --color-hero: #dfe7ef;
+    --color-footer: #273c55;
+    --color-focus: #b66a43;
+    --color-table-background: #fffaf5;
+    --color-table-heading: #efe4d6;
+    --color-table-border: #d8c2ad;
+}
+
+/* Aktiviert das Dark Theme, wenn <html data-theme="dark"> gesetzt ist */
+:root[data-theme="dark"] {
+    --color-text: #e6eaf0;
+    --color-background: #182431;
+    --color-heading: #c0d9f2;
+    --color-link: #9bc5ed;
+    --color-btn-background: #426c94;
+    --color-btn-background-hover: #5683ad;
+    --color-btn-border: #9bc5ed;
+    --color-link-hover: #f0b08e;
+    --color-panel: #24394c;
+    --color-border: #526c82;
+    --color-header: #223649;
+    --color-hero: #263e52;
+    --color-footer: #142230;
+    --color-focus: #efb587;
+    --color-table-background: #24394c;
+    --color-table-heading: #34506a;
+    --color-table-border: #60788d;
+}
+
+/* ? === Basics === */
+* {
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+}
+
+/* ? === Typography === */
+h1,
+h2,
+h3 {
+    color: var(--color-heading);
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    max-width: 72ch;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+/* ? === Layout === */
+.container {
+    max-width: $breite-inhalt;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+button,
+.button {
+    display: inline-block;
+    padding: 9px 17px;
+    color: var(--color-panel);
+    background-color: var(--color-btn-background);
+    border: 1px solid var(--color-btn-border);
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    color: var(--color-panel);
+    background-color: var(--color-btn-background-hover);
+    text-decoration: none;
+}
+
+.theme-toggle {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.45rem 0.8rem;
+    background: transparent;
+    color: var(--color-heading);
+    border: 2px solid var(--color-link);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: var(--color-hero);
+    color: var(--color-heading);
+}
+
+figure {
+    margin: 15px 0;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 20em), 1fr);
+    gap: $abstand-karten;
+    grid-auto-flow: dense;
+}
+
+.card-grid .card {
+    flex: 1 1 15rem;
+    background-color: var(--color-panel);
+    border: 1px solid var(--color-border);
+    min-width: 0;
+}
+
+/* ? === Header === */
+.site-header {
+    background-color: var(--color-header);
+    border-bottom: 3px solid var(--color-link);
+    padding: 18px 24px;
+}
+
+.logo {
+    position: relative;
+    top: 0;
+}
+
+.logo svg {
+    width: 190px;
+    height: 55px;
+    fill: var(--color-heading);
+    stroke: var(--color-link);
+}
+
+
+/* ? === Navigation === */
+.site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 0.6rem 1.4rem;
+}
+
+.site-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 0.1em;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    text-decoration: underline;
+}
+
+/* ? === Hero === */
+.hero {
+    background-color: var(--color-hero);
+    padding: 36px 0;
+}
+
+.hero-content,
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.hero-text,
+.hero-image,
+.two-columns>* {
+    flex: 1 1 19rem;
+}
+
+/* ? === Bilder === */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ? === Tabellen === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-table-background);
+}
+
+caption {
+    text-align: left;
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: var(--color-heading);
+}
+
+thead {
+    background-color: var(--color-table-heading);
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid var(--color-table-border);
+    text-align: left;
+}
+
+/* ? === Formular === */
+.contact-form {
+    background-color: var(--color-table-background);
+    border: 1px solid var(--color-table-border);
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-table-border);
+    border-radius: 8px;
+}
+
+/* ? === Footer === */
+.site-footer {
+    background-color: var(--color-footer);
+    color: var(--color-panel);
+    padding: 25px 0;
+}
+
+.site-footer a,
+.site-footer h2 {
+    color: var(--color-panel);
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-grid>div {
+    flex: 1 1 12rem;
+}
+
+
+@media (max-width: 640px) {
+    .site-header {
+        padding: 12px 16px;
+    }
+
+    .site-nav ul {
+        gap: 0.3rem 0.9rem;
+    }
+
+    .hero,
+    .page-header {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text,
+    .hero-image,
+    .two-columns>*,
+    .card-grid .card {
+        flex-basis: 100%;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}

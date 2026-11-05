@@ -1,3 +1,9 @@
+/* ? === Variablen === */
+
+
+
+
+
 @font-face {
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -25,7 +31,7 @@
     src: url(https://gstatic.com) format('truetype');
 }
 
-/* ? === Variablen === */
+/* ? === custom properties === */
 /* Standard: Light Theme */
 :root {
     --color-text: #292d33;
