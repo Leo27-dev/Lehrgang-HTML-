@@ -1,0 +1,56 @@
+// Nachteile von @import:
+// - Verwechslung mit dem nativen CSS-@import
+// - Code-Duplizierung: Bei Mehrfachnutzung werden Datei-Inhalte mehrfach einkompiliert
+// - Keine Namespaces: Alle Variablen sind global, was zu Namenskonflikten führt
+
+/* === Veralteter Ansatz === */
+// @import "colors";
+// @import "buttons";
+
+/* === Moderner & besserer Ansatz mit @use === */
+// @use "colors";
+// @use "buttons";
+
+// /* Hinweis: Wenn Ihre Datei "_colors.scss" heißt, lautet der Namespace "colors" */
+// body {
+//     background-color: colors.$white; // Korrigiert von 'color.$white'
+//     color: colors.$blue;
+// }
+
+/* ? === var. 2 mit alias === */
+// @use "colors" as c;
+// @use "buttons" as b;
+
+// body {
+//     background-color: c.$white;
+//     color: c.$blue;
+// }
+
+/* ? === var. 3 globaler Namespace (Modulangabe kann wegelassen werden) === */
+@use "colors" as *;
+@use "buttons" as *;
+
+body {
+    background-color: $white;
+    color: $orange;
+}
+
+/* ? === Module konfigurierbar machen === */
+@use "cards" with ($border-color: blue, $border-radius: 20px);
+
+/* ? === weiterreichen von inhalten mit @forward === */
+
+@use "../basics/";
+
+
+div {
+    border: 1px solid cards.$border-color;
+    padding: basics.$size-5;
+    margin-bottom: basics.$size-3;
+}
+
+.box {
+    background-color: basics.$pink;
+    font-family: basics.$front-sans;
+    border-radius: basics.$size-1;
+}

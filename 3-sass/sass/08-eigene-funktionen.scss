@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .container {
   border: 1px solid gray;
   width: 100%;
@@ -5,3 +7,24 @@
 }
 
 /* === eigene Funktionen === */
+// Unterschied zu Mixins:
+// Funktionen liefern i.d.R. einen Rückgabewert, keine CSS-Regeln.
+
+$backgroundcolor: hsl(198, 55%, 94%);
+
+@function textcolor($backgroundcolor) {
+
+  // Helligkeit des übergebenen Wertes prüfen
+  @if (color.channel($backgroundcolor, "lightness") > 50%) {
+    @return black;
+  }
+
+  @else {
+    @return white;
+  }
+}
+
+.container {
+  background-color: $backgroundcolor;
+  color: textcolor($backgroundcolor);
+}
