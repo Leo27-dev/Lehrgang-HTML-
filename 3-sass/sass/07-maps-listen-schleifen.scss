@@ -1,4 +1,28 @@
-.container, .icon {
+@use "sass:list";
+@use "sass:map";
+
+/* === 2. Variablen & Maps === */
+$sizes: 40, 60, 100;
+
+$breakpoints: (
+  small: 40em,
+  medium: 60em,
+  large: 80em,
+  x-large: 200em
+);
+
+/* === 3. Mixins === */
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/* === 4. Basis-Styles === */
+.container,
+.icon {
   border: 1px solid gray;
 }
 
@@ -7,49 +31,72 @@
   color: white;
 }
 
-/* === Listen === */
+/* === 5. Listen & Listen-Funktionen === */
+.example {
+  padding: list.nth($sizes, 2) * 1px;
+}
 
+/* === 6. Schleifen (Generierte Icon-Klassen) === */
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: calc(($size / 2) * 1px);
+    width: $size * 1px;
+    height: $size * 1px;
+  }
+}
 
-// Maps mit Mixins
+/* === 7. Anwendung des Media-Query-Mixins === */
+.container {
+  width: 100%;
 
+  @include mq(medium) {
+    width: 80%;
+    /* Wird ab 60em aktiv */
+  }
+
+  @include mq(large) {
+    max-width: 1200px;
+    /* Wird ab 80em aktiv */
+  }
+}
 
 /* === verschachtelte Maps === */
 
 
 // generiere custom properies
-:root {
-  @each $color-key, $color-values in $colors {
-    @each $tone-key, $tone-value in $color-values {
+// :root {
+//   @each $color-key, $color-values in $colors {
+//     @each $tone-key, $tone-value in $color-values {
 
-      @if($tone-key ==normal) {
-        --#{$color-key}: #{$tone-value};
-      }
+//       @if($tone-key ==normal) {
+//         --#{$color-key}: #{$tone-value};
+//       }
 
-      @else {
-        --#{$color-key}-#{$tone-key}: #{$tone-value};
-      }
+//       @else {
+//         --#{$color-key}-#{$tone-key}: #{$tone-value};
+//       }
 
-    }
-  }
-}
+//     }
+//   }
+// }
 
-// Klassen erstellen und custom-properties zuweisen
-@each $color-key, $color-values in $colors {
-  @each $tone-key, $tone-value in $color-values {
+// // Klassen erstellen und custom-properties zuweisen
+// @each $color-key, $color-values in $colors {
+//   @each $tone-key, $tone-value in $color-values {
 
-    @if($tone-key ==normal) {
-      .bg-#{$color-key}-#{$tone-key} {
-        background-color: var(--#{$color-key});
-      }
-    }
+//     @if($tone-key ==normal) {
+//       .bg-#{$color-key}-#{$tone-key} {
+//         background-color: var(--#{$color-key});
+//       }
+//     }
 
-    @else {
-      .bg-#{$color-key}-#{$tone-key} {
-        background-color: var(--#{$color-key}-#{$tone-key});
-      }
-    }
+//     @else {
+//       .bg-#{$color-key}-#{$tone-key} {
+//         background-color: var(--#{$color-key}-#{$tone-key});
+//       }
+//     }
 
-  }
-}
+//   }
+// }
 
 /* === Schleifen mit @for === */
