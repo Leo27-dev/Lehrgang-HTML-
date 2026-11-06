@@ -1,3 +1,7 @@
+@use "tokens";
+@use "mixins";
+
+
 /* ? === Variablen === */
 $breite-inhalt: 1040px;
 $abstand-karten: $abstand-karten;
@@ -200,6 +204,7 @@ figure {
     background-color: var(--color-panel);
     border: 1px solid var(--color-border);
     min-width: 0;
+    @include mixins.card-border(var(--color-border))
 }
 
 /* ? === Header === */

@@ -40,8 +40,8 @@ nav {
 }
 
 /* grid-are: row-start */
-.aside grid-area: {
-  rowe 4 / 2 / 5 /11
+.aside grid-area {
+  rowe: 4 / 2 / 5 /11
 }
 
 .footer {
@@ -52,11 +52,11 @@ nav {
   .content {
     grid-column: 1 / 8;
     grid-row: 3 / 5;
-  }
+  
 
   grid-column: 8 / 11;
   grid-row: 3 / 5;
-}
+}}
 
 @media screen and (min-with: 64rem) {
   header {

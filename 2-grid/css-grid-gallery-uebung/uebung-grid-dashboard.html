@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,26 +38,23 @@
       box-shadow: 0 8px 24px rgb(0 0 0 / 0.06);
     }
 
-    .task-box li + li {
+    .task-box li+li {
       margin-top: 0.4rem;
     }
 
     .dashboard {
-      /*
-        TODO 1:
-        Erstelle ein Grid für ein Dashboard mit 6 gleich breiten Spalten.
+      display: grid;
+      /* TODO 1: Erstelle ein Grid für ein Dashboard mit 6 gleich breiten Spalten. */
+      grid-template-columns: repeat(6, 1fr);
 
-        TODO 2:
-        Die Anzahl der Zeilen ist nicht bekannt.
-        Lege deshalb die Höhe automatisch entstehender Zeilen auf 100px fest.
+      /* TODO 2: Lege die Höhe automatisch entstehender Zeilen auf 100px fest. */
+      grid-auto-rows: 100px;
 
-        TODO 3:
-        Aktiviere eine dichte Packung, damit kleinere Kacheln Lücken schließen können.
+      /* TODO 3: Aktiviere eine dichte Packung, damit kleinere Kacheln Lücken schließen können. */
+      grid-auto-flow: dense;
 
-        TODO 4:
-        Ergänze einen Abstand zwischen den Kacheln.
-      */
-      
+      /* TODO 4: Ergänze einen Abstand zwischen den Kacheln. */
+      gap: 10px;
     }
 
     .widget {
@@ -86,28 +84,19 @@
     }
 
     .widget--hero {
-      /*
-        TODO 5:
-        Diese Hauptkachel soll deutlich größer werden:
-        3 Spalten breit und 2 Zeilen hoch.
-      */
-      
+      /* TODO 5: Diese Hauptkachel soll 3 Spalten breit und 2 Zeilen hoch werden. */
+      grid-column: span 3;
+      grid-row: span 2;
     }
 
     .widget--wide {
-      /*
-        TODO 6:
-        Diese Kacheln sollen 2 Spalten breit werden.
-      */
-      
+      /* TODO 6: Diese Kacheln sollen 2 Spalten breit werden. */
+      grid-column: span 2;
     }
 
     .widget--tall {
-      /*
-        TODO 7:
-        Diese Kacheln sollen 2 Zeilen hoch werden.
-      */
-      
+      /* TODO 7: Diese Kacheln sollen 2 Zeilen hoch werden. */
+      grid-row: span 2;
     }
 
     .widget--small {
@@ -115,10 +104,10 @@
         Diese Klasse braucht keine Grid-Regel.
         Sie ist nur zur besseren Lesbarkeit im HTML vorhanden.
       */
-      
     }
   </style>
 </head>
+
 <body>
   <main>
     <h1>Übung: Dashboard mit dynamischen Grid-Kacheln</h1>
@@ -132,7 +121,7 @@
       </p>
       <ol>
         <li>Lege für <code>.dashboard</code> ein Grid mit 6 gleich breiten Spalten an.</li>
-        <li>Gib automatisch erzeugten Zeilen eine Höhe von 70px.</li>
+        <li>Gib automatisch erzeugten Zeilen eine Höhe von 100px.</li>
         <li>Aktiviere eine dichte Packung mit <code>grid-auto-flow: dense;</code>.</li>
         <li>Lasse die Hauptkachel 3 Spalten und 2 Zeilen einnehmen.</li>
         <li>Lasse breite Kacheln 2 Spalten einnehmen.</li>
@@ -202,4 +191,5 @@
     </section>
   </main>
 </body>
+
 </html>

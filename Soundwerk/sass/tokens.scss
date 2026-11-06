@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "sass:math";
+$spaces: (
+    smal: 1em,
+    medium: 1.5em,
+    large: 3em,
+    ) $button-color: (
+
+        primery: #315e91,
+        secondary: #a14b39,
+        sucsess: #356b35) @function haf-space($key) {
+        $value: map.get($spaces, $key
+        );
+
+    @if $value ==null {}
+}
