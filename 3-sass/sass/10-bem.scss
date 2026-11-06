@@ -20,5 +20,13 @@
  * UND die Klasse .problem-serious verwendet werden.
  */
 
+.problem {
+    border: 1px solid red;
+    background-color: #fdd;
+    border-radius: 0.25em;
 
-// ! Übung 4
+    &--serious {
+        border-width: 3px;
+
+    }
+}

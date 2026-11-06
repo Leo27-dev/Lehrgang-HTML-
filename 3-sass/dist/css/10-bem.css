@@ -19,4 +19,12 @@
  * In HTML muss für das Element mit der Grundformatierung nur die Klasse .problem 
  * und für das Element mit der besonderen Formatierung die Klasse .problem 
  * UND die Klasse .problem-serious verwendet werden.
- *//*# sourceMappingURL=10-bem.css.map */
+ */
+.problem {
+  border: 1px solid red;
+  background-color: #fdd;
+  border-radius: 0.25em;
+}
+.problem--serious {
+  border-width: 3px;
+}/*# sourceMappingURL=10-bem.css.map */

@@ -1,1 +1,11 @@
+.problem {
+    border: 1px solid red;
+    background-color: #fdd;
+    border-radius: .25em
+}
+
+.problem--serious {
+    border-width: 3px
+}
+
 /*# sourceMappingURL=10-bem.min.css.map */
